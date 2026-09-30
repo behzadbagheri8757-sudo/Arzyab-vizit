@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl" data-theme="light">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,8 @@
 <meta name="apple-mobile-web-app-title" content="ارزیاب مغازه">
 <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-<!-- Manifest، آیکون و SW بعداً به‌صورت فایل جدا در ریشهٔ ریپو اضافه می‌شوند -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>ارزیاب مغازه‌ها</title>
 <style>
 :root{
@@ -2171,6 +2172,15 @@ async function handleSaveFollowUp(){
    ۷. دکمهٔ «مسیریابی» فقط با مختصات ذخیره‌شده کار می‌کند + geolocation در شیت ویرایش
    ۸. navigator.storage.persist() در init برای جلوگیری از پاک شدن داده‌ها
 */
+</script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker registered successfully!'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    });
+  }
 </script>
 </body>
 </html>
