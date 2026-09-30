@@ -3,149 +3,507 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ارزیاب مغازه">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEQklEQVR4nO3T0YrcVhRE0Xx3fj4hkIAxMRvdVPVXCvpuSdc3VS+99MfPn3/9xWHkE6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY+HQU9THw+DnqY+HgY9TX08DHqa+ngY9DT18TDoaerjYdDT1MfDoKepj4dBT1MfD4Oepj4eBj1NfTwMepr6eBj0NPXxMOhp6uNh0NPUx8Ogp6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY+HQU9THw+DnqY+HgY9TX08DHqa+ngY9DT18TDoaerjYdDT1MfDoKepj4dBT1MfD4Oepj4eBj1NfTwMepr6eBj0NPXxMOhp6uNh0NPUx8Ogp6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY+HQU9THw+DnqY+HgY9TX08DHqa+ngY9DT18TDoaerj8bBB1x8HlvICsJQXgKW8ACzlBWApLwBLeQFYygvAUl4AlvICsJQXgKW8ACzlBWApLwBLeQFYygvAUl4AlvICsJQXgKW8ACzlBbjdP6k7XCYvwK3+S93jMnkBbvMt6i6XyQtwi+9T97lMXoDL/V/qTpfJC3CpH6XudZm8AJf5Wepul8kLcIlfpe53mbwAcx9J3fEyeQHmDJov46Ope14mL8DMbz/mf+QFmHgldddL5QX4NGP+Rl6ATzHm7+QFeJsx/4+8AG8x5h/IC/AyY/6JvAAvMeZfyAvwEmP+hbwAH2bMH5AX4EOM+YPyAvzSK6m75vIC/JQxvygvwA8Z8xvyAhcPou7wme7G/Ia8wA2jqHu829uY35AXuGkYdZd3OhvzG/ICN46j7vNqX2N+Q17g5oHUnV7t+7R3yOUFgoHUvV7p+oTuR8kLRCOpu32056mdj5UXCIdS9/tIx9P6Hi8vEI/l9H4n9HyUvMCFTh6LMV8kL3ChU0dzaq8vIS9wsdPGc1qfLycvcINTRnRKjy8tL3CTekz1838beYEblaMy5pvkBW5WjNqYb5QXCNw5amO+WV4gcseo7/xx+FdeIHTl4Iw5kheIXTE8Yw7lBQ6wHKAxx/ICh1gM0ZgPkBc4yGcGacyHyAsc5p1hGvNB8gIHenWgxnyQvMCh1qnf57eRFziYMT9QXuBwBv0weYEHMOYHyQs8hDE/RF7gQYz5AfICD2PMh8sLPJAxHywv8FDGfKi8wIMZ84HyAg9nzIfJC8BSXgCW8gKwlBeApbwALOUFYCkvAEt5AVjKC8BSXgCW8gKwlBeApbwALOUFYCkvAEt5AVjKC8BSXgCW8gKwlBeApeNTfyAeOJqTUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY+HQU9THw+DnqY+HgY9TX08DHqa+ngY9DT18TDoaerjYdDT1MfDoKepj4dBT1MfD4Oepj4eBj1NfTwMepr6eBj0NPXxMOhp6uNh0NPUx8Ogp6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY+HQU9THw+DnqY+HgY9TX08DHqa+ngY9DT18TDoaerj8ahB/w1EKy9smtH9bAAAAABJRU5ErkJggg==">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22%D8%A7%D8%B1%D8%B2%DB%8C%D8%A7%D8%A8%20%D9%85%D8%BA%D8%A7%D8%B2%D9%87%E2%80%8C%D9%87%D8%A7%22%2C%22short_name%22%3A%22%D8%A7%D8%B1%D8%B2%DB%8C%D8%A7%D8%A8%22%2C%22theme_color%22%3A%22%23F2F2F7%22%2C%22background_color%22%3A%22%23F2F2F7%22%2C%22display%22%3A%22standalone%22%2C%22start_url%22%3A%22.%22%2C%22scope%22%3A%22.%2F%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEQklEQVR4nO3T0YrcVhRE0Xx3fj4hkIAxMRvdVPVXCvpuSdc3VS%2B99MfPn3%2F9xWHkE6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY%2BHQU9THw%2BDnqY%2BHgY9TX08DHqa%2BngY9DT18TDoaerjYdDT1MfDoKepj4dBT1MfD4Oepj4eBj1NfTwMepr6eBj0NPXxMOhp6uNh0NPUx8Ogp6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY%2BHQU9THw%2BDnqY%2BHgY9TX08DHqa%2BngY9DT18TDoaerj8bBB1x8HlvICsJQXgKW8ACzlBWApLwBLeQFYygvAUl4AlvICsJQXgKW8ACzlBWApLwBLeQFYygvAUl4AlvICsJQXgKW8ACzlBbjdP6k7XCYvwK3%2BS93jMnkBbvMt6i6XyQtwi%2B9T97lMXoDL%2FV%2FqTpfJC3CpH6XudZm8AJf5Wepul8kLcIlfpe53mbwAcx9J3fEyeQHmDJov46Ope14mL8DMbz%2Fmf%2BQFmHgldddL5QX4NGP%2BRl6ATzHm7%2BQFeJsx%2F4%2B8AG8x5h%2FIC%2FAyY%2F6JvAAvMeZfyAvwEmP%2BhbwAH2bMH5AX4EOM%2BYPyAvzSK6m75vIC%2FJQxvygvwA8Z8xvyAhcPou7wme7G%2FIa8wA2jqHu829uY35AXuGkYdZd3OhvzG%2FICN46j7vNqX2N%2BQ17g5oHUnV7t%2B7R3yOUFgoHUvV7p%2BoTuR8kLRCOpu32056mdj5UXCIdS9%2FtIx9P6Hi8vEI%2Fl9H4n9HyUvMCFTh6LMV8kL3ChU0dzaq8vIS9wsdPGc1qfLycvcINTRnRKjy8tL3CTekz1838beYEblaMy5pvkBW5WjNqYb5QXCNw5amO%2BWV4gcseo7%2Fxx%2BFdeIHTl4Iw5kheIXTE8Yw7lBQ6wHKAxx%2FICh1gM0ZgPkBc4yGcGacyHyAsc5p1hGvNB8gIHenWgxnyQvMCh1qnf57eRFziYMT9QXuBwBv0weYEHMOYHyQs8hDE%2FRF7gQYz5AfICD2PMh8sLPJAxHywv8FDGfKi8wIMZ84HyAg9nzIfJC8BSXgCW8gKwlBeApbwALOUFYCkvAEt5AVjKC8BSXgCW8gKwlBeApbwALOUFYCkvAEt5AVjKC8BSXgCW8gKwlBeApeNTfyAeOJqTUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY%2BHQU9THw%2BDnqY%2BHgY9TX08DHqa%2BngY9DT18TDoaerjYdDT1MfDoKepj4dBT1MfD4Oepj4eBj1NfTwMepr6eBj0NPXxMOhp6uNh0NPUx8Ogp6mPh0FPUx8Pg56mPh4GPU19PAx6mvp4GPQ09fEw6Gnq42HQ09THw6CnqY%2BHQU9THw%2BDnqY%2BHgY9TX08DHqa%2BngY9DT18TDoaerj8ahB%2Fw1EKy9smtH9bAAAAABJRU5ErkJggg%3D%3D%22%2C%22sizes%22%3A%22180x180%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
 <title>ارزیاب مغازه‌ها</title>
 <style>
-  :root{
-    --bg:#FAFAF8; --surface:#FFFFFF; --surface-2:#F1F0EC; --text:#1C1C1E; --muted:#6B6B70; --border:#E4E3DE;
-    --accent:#1E6B55; --accent-text:#FFFFFF; --danger:#C64B4B;
-    --rank-a-plus:#0F7A4A; --rank-a:#2E9A5C; --rank-b:#3B7DD8; --rank-c:#D98A22; --rank-d:#C64B4B;
-    --radius:14px; --safe-bottom:env(safe-area-inset-bottom,0px); --safe-top:env(safe-area-inset-top,0px);
-  }
-  html[data-theme="dark"]{
-    --bg:#101211; --surface:#1B1E1C; --surface-2:#20241F; --text:#EDEDEA; --muted:#9A9A96; --border:#2C302D;
-    --accent:#35A085; --accent-text:#08110D;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:var(--bg); color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;
-    -webkit-tap-highlight-color:transparent; overscroll-behavior-y:none;
-    font-size:15px; line-height:1.6;
-  }
-  @media (prefers-reduced-motion:reduce){ *{transition:none!important; animation:none!important;} }
-  #app{display:flex; flex-direction:column; min-height:100vh;}
-  header.topbar{
-    position:sticky; top:0; z-index:20; background:var(--surface); border-bottom:1px solid var(--border);
-    padding:calc(10px + var(--safe-top)) 16px 10px; display:flex; align-items:center; justify-content:space-between;
-  }
-  header.topbar h1{font-size:17px; margin:0; font-weight:700;}
-  .icon-btn{
-    background:var(--surface-2); border:1px solid var(--border); color:var(--text); border-radius:10px;
-    width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:17px; cursor:pointer;
-  }
-  main#view-root{flex:1; padding:14px 14px calc(96px + var(--safe-bottom)); max-width:640px; margin:0 auto; width:100%;}
-  nav#bottom-nav{
-    position:fixed; bottom:0; right:0; left:0; z-index:30; background:var(--surface); border-top:1px solid var(--border);
-    display:flex; padding-bottom:var(--safe-bottom);
-  }
-  nav#bottom-nav button{
-    flex:1; background:none; border:none; color:var(--muted); padding:9px 2px 8px; font-size:11px;
-    display:flex; flex-direction:column; align-items:center; gap:3px; cursor:pointer; font-family:inherit;
-  }
-  nav#bottom-nav button .ic{font-size:19px;}
-  nav#bottom-nav button.active{color:var(--accent); font-weight:700;}
-  h2.view-title{font-size:19px; margin:2px 0 14px; font-weight:700;}
-  .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px; margin-bottom:12px;}
-  .field-label{font-size:12.5px; color:var(--muted); margin:0 0 8px; font-weight:600;}
-  input[type=text],input[type=search],input[type=number]{
-    width:100%; padding:12px 14px; border-radius:12px; border:1.5px solid var(--border); background:var(--surface);
-    color:var(--text); font-size:16px; font-family:inherit;
-  }
-  input:focus-visible, button:focus-visible, select:focus-visible{outline:2.5px solid var(--accent); outline-offset:2px;}
-  .chip-wrap{display:flex; flex-wrap:wrap; gap:8px;}
-  .chip{
-    border:1.5px solid var(--border); background:var(--surface-2); color:var(--text); border-radius:11px;
-    padding:11px 14px; font-size:14px; cursor:pointer; font-family:inherit; min-height:44px; line-height:1.35;
-    text-align:right; flex:0 0 auto;
-  }
-  .chip.chip-selected{background:var(--accent); border-color:var(--accent); color:var(--accent-text); font-weight:700;}
-  .chip.chip-block{flex:1 1 100%;}
-  .q-block{margin-bottom:18px; padding-bottom:16px; border-bottom:1px dashed var(--border);}
-  .q-block:last-of-type{border-bottom:none; margin-bottom:6px;}
-  .q-num{display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%;
-    background:var(--surface-2); font-size:11px; margin-inline-start:6px; color:var(--muted); font-weight:700;}
-  .q-title{font-size:14.5px; font-weight:700; margin-bottom:9px;}
-  .live-score{
-    position:sticky; top:56px; z-index:15; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
-    padding:12px 14px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; gap:10px;
-  }
-  .live-score .num{font-size:26px; font-weight:800;}
-  .live-score .rank-badge{padding:5px 12px; border-radius:20px; color:#fff; font-weight:800; font-size:14px;}
-  .live-score .sub{font-size:11.5px; color:var(--muted);}
-  .btn{
-    border:none; border-radius:13px; padding:14px 16px; font-size:15.5px; font-weight:700; cursor:pointer;
-    font-family:inherit; width:100%; display:flex; align-items:center; justify-content:center; gap:8px;
-  }
-  .btn-primary{background:var(--accent); color:var(--accent-text);}
-  .btn-secondary{background:var(--surface-2); color:var(--text); border:1.5px solid var(--border);}
-  .btn-danger{background:transparent; color:var(--danger); border:1.5px solid var(--danger);}
-  .btn:disabled{opacity:.45; cursor:not-allowed;}
-  .btn-row{display:flex; gap:8px;}
-  .btn-row .btn{flex:1;}
-  .sticky-save{position:sticky; bottom:calc(8px + var(--safe-bottom)); padding-top:6px;}
-  .shop-row{
-    display:flex; align-items:center; justify-content:space-between; gap:10px; padding:13px 14px;
-    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:9px; cursor:pointer;
-  }
-  .shop-row .meta{min-width:0;}
-  .shop-row .name{font-weight:700; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-  .shop-row .sub{font-size:12px; color:var(--muted); margin-top:2px;}
-  .rank-pill{padding:5px 11px; border-radius:20px; color:#fff; font-weight:800; font-size:13px; flex-shrink:0;}
-  .row-inline{display:flex; gap:8px; margin-bottom:10px;}
-  select{
-    padding:11px 12px; border-radius:11px; border:1.5px solid var(--border); background:var(--surface); color:var(--text);
-    font-size:14px; font-family:inherit; flex:1;
-  }
-  .empty-state{text-align:center; padding:40px 16px; color:var(--muted);}
-  .empty-state .big{font-size:34px; margin-bottom:8px;}
-  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:9px;}
-  .stat-box{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:13px; text-align:center;}
-  .stat-box .n{font-size:22px; font-weight:800;}
-  .stat-box .l{font-size:11.5px; color:var(--muted); margin-top:3px;}
-  .rank-row{display:flex; align-items:center; justify-content:space-between; padding:9px 0; border-bottom:1px solid var(--border);}
-  .rank-row:last-child{border-bottom:none;}
-  .badge-sm{width:34px; height:26px; border-radius:8px; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:12.5px;}
-  .timeline-item{position:relative; padding-inline-end:16px; padding-bottom:16px; border-inline-end:2px solid var(--border); margin-inline-end:9px;}
-  .timeline-item:last-child{border-color:transparent; padding-bottom:0;}
-  .timeline-item::before{content:''; position:absolute; inset-inline-end:-6px; top:2px; width:10px; height:10px; border-radius:50%; background:var(--accent);}
-  .timeline-date{font-size:12px; color:var(--muted); margin-bottom:4px;}
-  .timeline-tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:6px;}
-  .tag-pill{font-size:11.5px; background:var(--surface-2); border:1px solid var(--border); border-radius:20px; padding:3px 9px;}
-  .toast{
-    position:fixed; bottom:calc(74px + var(--safe-bottom)); left:50%; transform:translateX(-50%) translateY(20px);
-    background:var(--text); color:var(--bg); padding:11px 20px; border-radius:30px; font-size:13.5px; font-weight:700;
-    opacity:0; pointer-events:none; transition:opacity .2s, transform .2s; z-index:100; white-space:nowrap;
-  }
-  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
-  .converted-banner{background:var(--rank-a-plus); color:#fff; border-radius:var(--radius); padding:12px 14px; margin-bottom:12px; font-weight:700; font-size:14px;}
-  .accordion-head{display:flex; align-items:center; justify-content:space-between; cursor:pointer; padding:2px 0;}
-  .overlay{position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:60; display:flex; align-items:flex-end;}
-  .sheet{background:var(--surface); width:100%; max-height:88vh; overflow:auto; border-radius:18px 18px 0 0; padding:18px 16px calc(18px + var(--safe-bottom));}
-  .sheet h3{margin:0 0 12px; font-size:16px;}
-  textarea.copy-area{width:100%; height:160px; border-radius:11px; border:1.5px solid var(--border); background:var(--surface-2); color:var(--text); padding:10px; font-size:13px; font-family:inherit;}
-  .link-btn{background:none; border:none; color:var(--accent); font-weight:700; font-size:13.5px; cursor:pointer; font-family:inherit; padding:6px 2px;}
-  .neigh-list{display:flex; flex-direction:column; gap:6px; margin-top:8px;}
-  .neigh-row{display:flex; align-items:center; justify-content:space-between; background:var(--surface-2); border-radius:9px; padding:8px 10px; font-size:13.5px;}
-  .answer-row{display:flex; justify-content:space-between; gap:10px; padding:8px 0; border-bottom:1px solid var(--border); font-size:13.5px;}
-  .answer-row:last-child{border-bottom:none;}
-  .answer-row .q{color:var(--muted); flex:1;}
-  .answer-row .a{font-weight:700; text-align:left;}
+/* ════════════════════════════════════════════════════════════
+   رنگ‌های سیستمی iOS
+   ════════════════════════════════════════════════════════════ */
+:root{
+  --bg:#F2F2F7; --surface:#FFFFFF; --surface-2:#F2F2F7;
+  --text:#000000; --text-2:rgba(60,60,67,0.60); --text-3:rgba(60,60,67,0.30);
+  --separator:rgba(60,60,67,0.21); --fill:rgba(120,120,128,0.12);
+  --accent:#007AFF; --accent-2:rgba(0,122,255,0.15);
+  --green:#34C759; --red:#FF3B30; --orange:#FF9500;
+  --rank-aplus:#34C759; --rank-a:#30B14B; --rank-b:#007AFF; --rank-c:#FF9500; --rank-d:#FF3B30;
+  --nav-bg:rgba(242,242,247,0.72);
+  --tab-bg:rgba(242,242,247,0.72);
+  --sheet-bg:rgba(255,255,255,0.94);
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bottom:env(safe-area-inset-bottom,0px);
+  --ease:cubic-bezier(0.32,0.72,0,1);
+}
+html[data-theme="dark"]{
+  --bg:#000000; --surface:#1C1C1E; --surface-2:#2C2C2E;
+  --text:#FFFFFF; --text-2:rgba(235,235,245,0.60); --text-3:rgba(235,235,245,0.30);
+  --separator:rgba(84,84,88,0.60); --fill:rgba(120,120,128,0.20);
+  --accent:#0A84FF; --accent-2:rgba(10,132,255,0.20);
+  --green:#30D158; --red:#FF453A; --orange:#FF9F0A;
+  --rank-aplus:#30D158; --rank-a:#34C759; --rank-b:#0A84FF; --rank-c:#FF9F0A; --rank-d:#FF453A;
+  --nav-bg:rgba(28,28,30,0.72);
+  --tab-bg:rgba(28,28,30,0.72);
+  --sheet-bg:rgba(44,44,46,0.94);
+}
+
+/* ════════════════════════════════════════════════════════════
+   پایه
+   ════════════════════════════════════════════════════════════ */
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,"SF Pro Text","SF Pro Display",system-ui,"Segoe UI",Tahoma,sans-serif;
+  font-size:17px; line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:none;
+  user-select:none;
+  -webkit-user-select:none;
+}
+input,textarea,select{user-select:text; -webkit-user-select:text;}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important; animation:none!important;}
+}
+:root{
+  --r-large:34px; --r-title1:28px; --r-title2:22px; --r-title3:20px;
+  --r-headline:17px; --r-body:17px; --r-callout:16px; --r-subhead:15px;
+  --r-footnote:13px; --r-caption:12px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   چیدمان اصلی
+   ════════════════════════════════════════════════════════════ */
+#app{display:flex; flex-direction:column; min-height:100vh; min-height:100dvh;}
+
+/* Navigation Bar */
+header.navbar{
+  position:sticky; top:0; z-index:50;
+  background:var(--nav-bg);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:0.5px solid var(--separator);
+  padding:calc(var(--safe-top)) 16px 0;
+  min-height:calc(44px + var(--safe-top));
+  display:flex; align-items:flex-end; justify-content:space-between;
+  padding-bottom:8px;
+}
+header.navbar .nav-title{
+  font-size:var(--r-headline); font-weight:600; text-align:center;
+  flex:1; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;
+}
+header.navbar.large-title .nav-title{
+  font-size:var(--r-large); font-weight:700; text-align:right; padding-top:2px;
+}
+header.navbar .nav-left, header.navbar .nav-right{
+  min-width:44px; display:flex; align-items:center; z-index:1;
+}
+header.navbar .nav-left{justify-content:flex-start;}
+header.navbar .nav-right{justify-content:flex-end;}
+
+/* دکمه‌های نوبار */
+.nav-btn{
+  background:none; border:none; color:var(--accent);
+  font-size:var(--r-body); font-weight:400; cursor:pointer;
+  font-family:inherit; padding:6px 0; min-height:44px; display:flex; align-items:center;
+  touch-action:manipulation;
+}
+.nav-btn:active{opacity:0.4; transition:opacity 0.1s ease-out;}
+
+/* محتوای اصلی */
+main#view-root{
+  flex:1; padding:8px 16px calc(70px + var(--safe-bottom));
+  max-width:640px; margin:0 auto; width:100%;
+}
+
+/* Tab Bar */
+nav.tabbar{
+  position:fixed; bottom:0; right:0; left:0; z-index:50;
+  background:var(--tab-bg);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-top:0.5px solid var(--separator);
+  display:flex; padding-bottom:var(--safe-bottom);
+  min-height:calc(49px + var(--safe-bottom));
+}
+nav.tabbar button{
+  flex:1; background:none; border:none; color:var(--text-3);
+  padding:6px 2px 4px; font-size:10px; font-weight:500;
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+  cursor:pointer; font-family:inherit; min-height:49px; justify-content:center;
+  touch-action:manipulation;
+}
+nav.tabbar button svg{width:24px; height:24px;}
+nav.tabbar button.active{color:var(--accent);}
+nav.tabbar button:active{opacity:0.6; transition:opacity 0.1s ease-out;}
+
+/* ════════════════════════════════════════════════════════════
+   کارت‌ها و گروه‌بندی
+   ════════════════════════════════════════════════════════════ */
+.section-title{
+  font-size:var(--r-subhead); font-weight:400; color:var(--text-2);
+  text-transform:uppercase; letter-spacing:0.3px;
+  margin:24px 16px 8px;
+}
+.section-title:first-child{margin-top:8px;}
+.grouped{
+  background:var(--surface); border-radius:10px; overflow:hidden;
+  margin-bottom:18px;
+}
+.grouped .row{padding:11px 16px; border-bottom:0.5px solid var(--separator);}
+.grouped .row:last-child{border-bottom:none;}
+.grouped .row:first-child{padding-top:12px;}
+.grouped .row:last-child{padding-bottom:12px;}
+
+/* ════════════════════════════════════════════════════════════
+   دکمه‌ها
+   ════════════════════════════════════════════════════════════ */
+.btn{
+  border:none; border-radius:12px; padding:0 16px;
+  min-height:50px; font-size:var(--r-body); font-weight:600;
+  cursor:pointer; font-family:inherit;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  width:100%; touch-action:manipulation;
+  transition:transform 0.1s var(--ease), opacity 0.1s ease-out;
+}
+.btn:active{transform:scale(0.97); opacity:0.7;}
+.btn-filled{background:var(--accent); color:#FFFFFF;}
+.btn-tinted{background:var(--accent-2); color:var(--accent);}
+.btn-secondary{background:var(--fill); color:var(--text);}
+.btn-plain{background:none; color:var(--accent); min-height:44px; border-radius:10px;}
+.btn-danger{background:none; color:var(--red); border:1.5px solid var(--red); min-height:50px;}
+.btn-danger:active{opacity:0.5;}
+.btn:disabled{opacity:0.35; cursor:not-allowed; transform:none;}
+.btn:disabled:active{transform:none; opacity:0.35;}
+.btn-row{display:flex; gap:8px; margin-bottom:12px;}
+.btn-row .btn{flex:1;}
+
+/* link-btn */
+.link-btn{
+  background:none; border:none; color:var(--accent); font-weight:600;
+  font-size:var(--r-body); cursor:pointer; font-family:inherit;
+  padding:6px 4px; min-height:44px; display:inline-flex; align-items:center;
+  touch-action:manipulation;
+  -webkit-touch-callout:none;
+}
+.link-btn:active{opacity:0.4; transition:opacity 0.1s ease-out;}
+.link-btn.danger{color:var(--red);}
+
+/* ════════════════════════════════════════════════════════════
+   فرم‌ها
+   ════════════════════════════════════════════════════════════ */
+.field-label{
+  font-size:var(--r-subhead); color:var(--text-2); font-weight:400;
+  margin:0 0 6px; padding:0 4px;
+}
+input[type=text],input[type=search],input[type=number],textarea,select{
+  width:100%; padding:12px 14px; border-radius:10px; border:none;
+  background:var(--surface-2); color:var(--text);
+  font-size:var(--r-body); font-family:inherit;
+  min-height:44px; box-sizing:border-box;
+  -webkit-appearance:none; appearance:none;
+}
+input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 3px var(--accent-2);
+  border:1.5px solid var(--accent);
+}
+input::placeholder,textarea::placeholder{color:var(--text-3);}
+select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C8C8C' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:left 14px center;
+  padding-left:36px;
+}
+
+/* Chip */
+.chip-wrap{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{
+  border:none; background:var(--fill); color:var(--text);
+  border-radius:10px; padding:10px 14px; font-size:var(--r-callout);
+  cursor:pointer; font-family:inherit; min-height:44px; line-height:1.35;
+  text-align:right; flex:0 0 auto; touch-action:manipulation;
+  transition:transform 0.08s var(--ease);
+}
+.chip:active{transform:scale(0.96);}
+.chip.chip-selected{
+  background:var(--accent); color:#FFFFFF; font-weight:600;
+}
+.chip.chip-block{flex:1 1 100%;}
+
+/* سؤالات */
+.q-block{margin-bottom:18px; padding-bottom:16px; border-bottom:0.5px solid var(--separator);}
+.q-block:last-child{border-bottom:none; margin-bottom:0;}
+.q-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:22px; height:22px; border-radius:50%; background:var(--fill);
+  font-size:var(--r-caption); margin-inline-start:6px; color:var(--text-2); font-weight:600;
+}
+.q-title{font-size:var(--r-callout); font-weight:600; margin-bottom:9px;}
+
+/* live-score */
+.live-score{
+  position:sticky; top:calc(44px + var(--safe-top)); z-index:15;
+  background:var(--surface); border:0.5px solid var(--separator);
+  border-radius:14px; padding:14px 16px; margin-bottom:14px;
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+}
+.live-score .num{font-size:var(--r-title1); font-weight:800;}
+.live-score .rank-badge{
+  padding:5px 14px; border-radius:20px; color:#fff;
+  font-weight:700; font-size:var(--r-callout);
+}
+.live-score .sub{font-size:var(--r-caption); color:var(--text-2);}
+.live-score .rank-desc{font-size:var(--r-footnote); color:var(--text-2); margin-top:4px; max-width:160px; text-align:left;}
+
+/* unanswered hint */
+.unanswered-hint{
+  font-size:var(--r-footnote); color:var(--orange); font-weight:500;
+  padding:0 4px; margin-bottom:8px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   لیست
+   ════════════════════════════════════════════════════════════ */
+/* Segment Control */
+.segment-control{
+  display:flex; background:var(--fill); border-radius:10px; padding:2px;
+  margin-bottom:12px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.segment-control::-webkit-scrollbar{display:none;}
+.segment-control button{
+  flex:1; white-space:nowrap; border:none; background:none;
+  color:var(--text-2); font-size:var(--r-subhead); font-weight:500;
+  padding:7px 12px; border-radius:8px; cursor:pointer; font-family:inherit;
+  min-height:36px; touch-action:manipulation; transition:all 0.2s var(--ease);
+}
+.segment-control button.active{
+  background:var(--surface); color:var(--text); font-weight:600;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12);
+}
+html[data-theme="dark"] .segment-control button.active{
+  background:var(--surface-2);
+}
+
+/* Search Bar */
+.search-bar{
+  position:relative; margin-bottom:12px;
+}
+.search-bar input{
+  padding-left:34px; padding-right:34px;
+}
+.search-bar .search-icon{
+  position:absolute; right:10px; top:50%; transform:translateY(-50%);
+  width:16px; height:16px; color:var(--text-3); pointer-events:none;
+}
+.search-bar .search-cancel{
+  position:absolute; left:8px; top:50%; transform:translateY(-50%);
+  color:var(--accent); font-size:var(--r-body); font-weight:400;
+  background:none; border:none; cursor:pointer; font-family:inherit;
+  display:none; touch-action:manipulation;
+}
+.search-bar.active .search-cancel{display:block;}
+
+/* Shop Row */
+.shop-row{
+  display:flex; align-items:center; gap:10px;
+  padding:11px 16px; min-height:44px;
+  background:var(--surface); border-bottom:0.5px solid var(--separator);
+  cursor:pointer; position:relative; overflow:hidden;
+  touch-action:manipulation;
+}
+.shop-row:last-child{border-bottom:none;}
+.shop-row:active{background:var(--fill);}
+.shop-row .meta{min-width:0; flex:1;}
+.shop-row .name{
+  font-weight:600; font-size:var(--r-body);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.shop-row .sub{font-size:var(--r-footnote); color:var(--text-2); margin-top:2px;}
+.shop-row .chevron{color:var(--text-3); flex-shrink:0; margin-inline-start:auto;}
+
+/* Swipe action */
+.swipe-actions{
+  position:absolute; top:0; bottom:0; right:0; display:flex;
+  z-index:0;
+}
+.swipe-actions button{
+  width:0; overflow:hidden; border:none; color:#fff;
+  font-size:var(--r-footnote); font-weight:600; cursor:pointer;
+  font-family:inherit; display:flex; align-items:center; justify-content:center;
+  white-space:nowrap; transition:width 0.3s var(--ease);
+}
+.swipe-actions .swipe-delete{background:var(--red);}
+.swipe-actions .swipe-visit{background:var(--green);}
+
+/* Pull to refresh */
+.pull-refresh{
+  text-align:center; padding:8px; color:var(--text-2);
+  font-size:var(--r-footnote);
+}
+
+/* ════════════════════════════════════════════════════════════
+   رتبه‌ها
+   ════════════════════════════════════════════════════════════ */
+.rank-pill{
+  padding:5px 12px; border-radius:20px; color:#fff;
+  font-weight:700; font-size:var(--r-footnote); flex-shrink:0;
+}
+.badge-sm{
+  min-width:34px; height:26px; border-radius:8px; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:var(--r-caption); padding:0 6px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   جزئیات
+   ════════════════════════════════════════════════════════════ */
+.converted-banner{
+  background:var(--green); color:#fff; border-radius:14px;
+  padding:14px 16px; margin-bottom:12px; font-weight:600; font-size:var(--r-body);
+  animation:fadeIn 0.3s var(--ease);
+}
+@keyframes fadeIn{from{opacity:0; transform:translateY(-8px);} to{opacity:1; transform:translateY(0);}}
+
+.sparkline{margin:0 0 12px; display:block;}
+
+.timeline-item{
+  position:relative; padding-inline-end:16px; padding-bottom:16px;
+  border-inline-end:2px solid var(--separator); margin-inline-end:9px;
+}
+.timeline-item:last-child{border-color:transparent; padding-bottom:0;}
+.timeline-item::before{
+  content:''; position:absolute; inset-inline-end:-6px; top:2px;
+  width:10px; height:10px; border-radius:50%; background:var(--accent);
+}
+.timeline-date{font-size:var(--r-footnote); color:var(--text-2); margin-bottom:4px;}
+.timeline-tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:6px;}
+.tag-pill{
+  font-size:var(--r-caption); background:var(--fill);
+  border-radius:20px; padding:3px 9px;
+}
+
+.answer-row{
+  display:flex; justify-content:space-between; gap:10px;
+  padding:8px 16px; border-bottom:0.5px solid var(--separator);
+  font-size:var(--r-callout);
+}
+.answer-row:last-child{border-bottom:none;}
+.answer-row .q{color:var(--text-2); flex:1;}
+.answer-row .a{font-weight:600; text-align:left;}
+
+/* Activity Ring */
+.activity-ring{
+  position:relative; width:120px; height:120px; margin:0 auto;
+}
+.activity-ring svg{transform:rotate(-90deg);}
+.activity-ring .ring-text{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  text-align:center;
+}
+.activity-ring .ring-num{font-size:var(--r-title2); font-weight:800;}
+.activity-ring .ring-label{font-size:var(--r-caption); color:var(--text-2);}
+
+/* Stat boxes */
+.stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;}
+.stat-box{
+  background:var(--surface); border-radius:14px; padding:14px; text-align:center;
+}
+.stat-box .n{font-size:var(--r-title3); font-weight:800;}
+.stat-box .l{font-size:var(--r-caption); color:var(--text-2); margin-top:3px;}
+
+/* Rank distribution bars */
+.rank-bar{display:flex; align-items:center; gap:10px; padding:6px 0;}
+.rank-bar .bar-track{
+  flex:1; height:8px; background:var(--fill); border-radius:4px; overflow:hidden;
+}
+.rank-bar .bar-fill{height:100%; border-radius:4px; transition:width 0.4s var(--ease);}
+
+/* ════════════════════════════════════════════════════════════
+   Sheet / Modal
+   ════════════════════════════════════════════════════════════ */
+.overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:100;
+  display:flex; align-items:flex-end; justify-content:center;
+  animation:fadeInBg 0.2s ease-out;
+}
+@keyframes fadeInBg{from{opacity:0;} to{opacity:1;}}
+.sheet{
+  background:var(--sheet-bg);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  width:100%; max-width:640px; max-height:90vh; max-height:90dvh;
+  overflow:auto; border-radius:10px 10px 0 0;
+  padding:8px 16px calc(20px + var(--safe-bottom));
+  animation:slideUp 0.28s var(--ease);
+}
+@keyframes slideUp{from{transform:translateY(100%);} to{transform:translateY(0);}}
+.sheet .drag-handle{
+  width:36px; height:5px; border-radius:3px; background:var(--text-3);
+  margin:0 auto 16px;
+}
+.sheet h3{margin:0 0 14px; font-size:var(--r-title3); font-weight:600; text-align:center;}
+.sheet .sheet-body{padding-bottom:8px;}
+
+/* ════════════════════════════════════════════════════════════
+   Toast
+   ════════════════════════════════════════════════════════════ */
+.toast{
+  position:fixed; top:calc(60px + var(--safe-top)); left:50%;
+  transform:translateX(-50%);
+  background:var(--text); color:var(--bg);
+  padding:12px 24px; border-radius:30px;
+  font-size:var(--r-callout); font-weight:600;
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease-out, transform 0.2s var(--ease);
+  z-index:200; white-space:nowrap; max-width:90vw;
+}
+.toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+/* ════════════════════════════════════════════════════════════
+   متفرقه
+   ════════════════════════════════════════════════════════════ */
+.empty-state{text-align:center; padding:48px 16px; color:var(--text-2);}
+.empty-state .big{font-size:40px; margin-bottom:10px;}
+.neigh-list{display:flex; flex-direction:column; gap:6px; margin-top:8px;}
+.neigh-row{
+  display:flex; align-items:center; justify-content:space-between;
+  background:var(--fill); border-radius:10px; padding:10px 12px;
+  font-size:var(--r-callout); min-height:44px;
+}
+.accordion-head{display:flex; align-items:center; justify-content:space-between; cursor:pointer; padding:2px 0; min-height:44px;}
+.route-info{font-size:var(--r-footnote); color:var(--text-2); margin-top:2px;}
+.sticky-save{
+  position:sticky; bottom:calc(8px + var(--safe-bottom));
+  padding-top:6px; z-index:10;
+}
+.streak-badge{
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:var(--r-caption); color:var(--orange); font-weight:600;
+  margin-top:4px;
+}
 </style>
 </head>
 <body>
+<script>
+// خواندن تم از localStorage قبل از رندر برای جلوگیری از flash
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(!t){ t = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'; }
+    document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+})();
+</script>
 <div id="app">
-  <header class="topbar">
-    <h1>🌿 ارزیاب مغازه‌ها</h1>
-    <button class="icon-btn" id="theme-toggle" aria-label="تغییر تم">🌙</button>
+  <header class="navbar" id="navbar">
+    <div class="nav-left" id="nav-left"></div>
+    <div class="nav-title" id="nav-title">ارزیاب مغازه‌ها</div>
+    <div class="nav-right" id="nav-right"></div>
   </header>
   <main id="view-root"></main>
-  <nav id="bottom-nav">
-    <button data-nav="entry"><span class="ic">✍️</span>ثبت</button>
-    <button data-nav="list"><span class="ic">📋</span>لیست</button>
-    <button data-nav="dashboard"><span class="ic">📊</span>داشبورد</button>
-    <button data-nav="routes"><span class="ic">🗺️</span>مسیرها</button>
-    <button data-nav="settings"><span class="ic">⚙️</span>تنظیمات</button>
+  <nav class="tabbar" id="tabbar">
+    <button data-nav="entry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>ثبت</button>
+    <button data-nav="list"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>لیست</button>
+    <button data-nav="dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>داشبورد</button>
+    <button data-nav="routes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>مسیرها</button>
+    <button data-nav="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>تنظیمات</button>
   </nav>
   <div class="toast" id="toast"></div>
   <div id="overlay-root"></div>
@@ -155,21 +513,25 @@
 'use strict';
 
 /* ============================================================
-   بخش ۱: تنظیمات کلی و سیستم امتیازدهی
+   بخش ۱: تنظیمات و سیستم امتیازدهی
    ============================================================ */
-const APP_VERSION = '1.0';
-const DB_NAME = 'ProspectScoutDB';
+const APP_VERSION = '2.1';
+const DB_NAME = 'ShopEvaluatorDB';
 const DB_VERSION = 1;
-const SCORING_VERSION = 1;
+const SCORING_VERSION = 3;
 
+// ۹ سؤال بازطراحی‌شده — وزن = حداکثر امتیاز سؤال، مجموع وزن‌ها = ۱۰۰
+// q5 و q10 نسخهٔ قبل ادغام شده‌اند (تمایل + سیگنال)
+// q9 از «رقابت در محدوده» به «تکرار ویزیت رقبا» تغییر کرده (عینی‌تر)
 const QUESTIONS = [
-  { id:'q1', label:'نوع و اندازه مغازه', weight:10, options:[
-    {key:'super_big',     label:'سوپر بزرگ', score:10},
-    {key:'resto_active',  label:'رستوران / آشپزخانه پرکار', score:8},
-    {key:'super_small',   label:'سوپر کوچک', score:6},
-    {key:'nuts_shop',     label:'آجیل و خشکبارفروشی', score:4},
-    {key:'other_ok',      label:'سایر — مناسب', score:2},
-    {key:'other_bad',     label:'سایر — نامناسب', score:1},
+  { id:'q1', label:'تخصص و ظرفیت مغازه', weight:10, options:[
+    {key:'nuts_specialty', label:'آجیل/خشکبار تخصصی', score:10},
+    {key:'super_dedicated', label:'سوپر با بخش اختصاصی حبوبات', score:8},
+    {key:'resto_active', label:'رستوران/آشپزخانه پرکار', score:7},
+    {key:'super_big', label:'سوپر بزرگ عمومی', score:5},
+    {key:'super_small', label:'سوپر کوچک محلی', score:4},
+    {key:'other_ok', label:'سایر — مناسب', score:2},
+    {key:'other_bad', label:'سایر — نامناسب', score:0},
   ]},
   { id:'q2', label:'حجم فعلی فروش حبوبات و خشکبار', weight:18, options:[
     {key:'huge', label:'خیلی زیاد', score:18},
@@ -178,53 +540,53 @@ const QUESTIONS = [
     {key:'low',  label:'کم', score:4},
     {key:'none', label:'تقریباً صفر', score:1},
   ]},
-  { id:'q3', label:'وضعیت تأمین‌کننده فعلی', weight:10, options:[
-    {key:'none_fixed', label:'تأمین‌کننده ثابت ندارد', score:10},
-    {key:'has_fixed',  label:'تأمین‌کننده ثابت دارد', score:3},
+  { id:'q3', label:'وضعیت تأمین‌کننده', weight:10, options:[
+    {key:'none_fixed',    label:'تأمین‌کننده ثابت ندارد', score:10},
+    {key:'very_unhappy',  label:'دارد ولی خیلی ناراضی است', score:9},
+    {key:'unhappy',       label:'دارد و ناراضی است', score:7},
+    {key:'neutral',       label:'دارد و بی‌تفاوت است', score:5},
+    {key:'happy',         label:'دارد و راضی است', score:3},
+    {key:'very_happy',    label:'دارد و خیلی راضی است (وفادار)', score:1},
   ]},
-  { id:'q4', label:'رضایت از تأمین‌کننده فعلی', weight:9, options:[
-    {key:'no_supplier',  label:'تأمین‌کننده ثابت ندارد', score:9},
-    {key:'very_unhappy', label:'خیلی ناراضی', score:8},
-    {key:'unhappy',      label:'ناراضی', score:6},
-    {key:'neutral',      label:'بی‌تفاوت', score:4},
-    {key:'happy',        label:'راضی', score:2},
-    {key:'very_happy',   label:'خیلی راضی', score:1},
+  { id:'q4', label:'دسترسی به تصمیم‌گیرنده', weight:8, options:[
+    {key:'owner_present', label:'صاحب/تصمیم‌گیرنده نهایی حاضر بود', score:8},
+    {key:'manager_full',  label:'مسئول خرید با اختیار کامل', score:6},
+    {key:'needs_coord',   label:'فقط فروشنده، نیاز به هماهنگی با صاحب', score:3},
+    {key:'absent',        label:'تصمیم‌گیرنده در دسترس نبود', score:1},
   ]},
-  { id:'q5', label:'دسترسی به تصمیم‌گیرنده', weight:8, options:[
-    {key:'owner_present', label:'صاحب مغازه بود', score:8},
-    {key:'manager_full',  label:'مسئول خرید بود', score:6},
-    {key:'needs_coord',   label:'نیاز به هماهنگی دارد', score:3},
-    {key:'absent',        label:'تصمیم‌گیرنده حضور نداشت', score:1},
+  // q5: ادغام تمایل + سیگنال‌های مثبت (weight: 20 = 12+8)
+  { id:'q5', label:'تمایل و واکنش به تأمین‌کننده جدید', weight:20, options:[
+    {key:'eager_active',   label:'مشتاق بود + قیمت خواست / تماس گرفت', score:20},
+    {key:'interested_deep', label:'علاقه‌مند بود + سؤال عمیق پرسید', score:14},
+    {key:'hesitant_listened', label:'مردد بود ولی گوش داد و علاقه‌مند به نظر رسید', score:8},
+    {key:'indifferent',     label:'بی‌تفاوت بود', score:3},
+    {key:'rejected',        label:'کاملاً رد کرد', score:0},
   ]},
-  { id:'q6', label:'تمایل به امتحان تأمین‌کننده جدید', weight:12, options:[
-    {key:'eager',      label:'مشتاق', score:12},
-    {key:'interested', label:'علاقه‌مند', score:8},
-    {key:'hesitant',   label:'هنوز تردید دارد', score:4},
-    {key:'closed',     label:'کاملاً بسته و مخالف', score:0},
+  { id:'q6', label:'شرایط پرداخت', weight:16, options:[
+    {key:'cash_weekly',    label:'نقدی یا تسویه هفتگی', score:16},
+    {key:'next_invoice',  label:'تسویه تا فاکتور بعدی', score:11},
+    {key:'d15_30_good',   label:'چک یا ۱۵-۳۰ روزه (سابقه خوب)', score:6},
+    {key:'d30plus_good',  label:'چک بالای ۳۰ روز (سابقه خوب)', score:3},
+    {key:'bad_history',   label:'سابقه بدحسابی یا چک برگشتی', score:0},
   ]},
-  { id:'q7', label:'شرایط پرداخت', weight:16, options:[
-    {key:'cash_weekly',  label:'نقدی / تسویه هفتگی', score:16},
-    {key:'next_invoice', label:'تسویه تا فاکتور بعدی', score:11},
-    {key:'d15_30',       label:'چک یا تسویه ۱۵ تا ۳۰ روزه', score:6},
-    {key:'long_or_bad',  label:'چک/طلب بالای ۳۰ روز یا مشکل‌دار', score:1},
-  ]},
-  { id:'q8', label:'فضای نمایش و نگهداری کالا', weight:6, options:[
+  { id:'q7', label:'فضای نمایش و نگهداری', weight:6, options:[
     {key:'dedicated', label:'فضای اختصاصی حبوبات و خشکبار', score:6},
-    {key:'partial',   label:'فقط برای حبوبات یا خشکبار جا دارد', score:4},
+    {key:'one_only',  label:'فقط برای یکی از دو دسته فضا دارد', score:4},
     {key:'mid_low',   label:'فضای متوسط یا کم', score:2},
-    {key:'none',      label:'فضای مناسب برای این کالاها ندارد', score:0},
+    {key:'none',      label:'فضای مناسب ندارد', score:0},
   ]},
-  { id:'q9', label:'موقعیت مکانی و ترافیک مشتری', weight:6, options:[
-    {key:'main',   label:'خیابان اصلی / کنار جاده', score:6},
-    {key:'dense',  label:'داخل محله پرجمعیت / پرمصرف', score:4},
-    {key:'normal', label:'محله یا موقعیت معمولی', score:2},
-    {key:'quiet',  label:'جای خلوت', score:1},
+  { id:'q8', label:'موقعیت مکانی و ترافیک', weight:6, options:[
+    {key:'main_road', label:'خیابان اصلی / کنار جاده', score:6},
+    {key:'dense',     label:'محله پرجمعیت / پرمصرف', score:4},
+    {key:'normal',    label:'موقعیت معمولی', score:2},
+    {key:'quiet',     label:'جای خلوت', score:1},
   ]},
-  { id:'q10', label:'احتمال سفارش تکراری', weight:5, options:[
-    {key:'very_high', label:'بسیار بالا', score:5},
-    {key:'high',      label:'بالا', score:3},
-    {key:'mid_low',   label:'متوسط / پایین', score:1},
-    {key:'unknown',   label:'نامشخص', score:0},
+  // q9: جایگزین شده از «رقابت در محدوده» (subjective) به «تکرار ویزیت رقبا» (عینی)
+  { id:'q9', label:'تکرار ویزیت نماینده‌های رقیب', weight:6, options:[
+    {key:'no_visits',      label:'هیچ نماینده‌ای سر نمی‌زند', score:6},
+    {key:'occasional',     label:'گاهی یکی می‌آید', score:4},
+    {key:'weekly',         label:'هفتگی می‌آیند', score:2},
+    {key:'frequent',       label:'هر روز / چندبار در هفته', score:0},
   ]},
 ];
 
@@ -236,65 +598,49 @@ const VISIT_TAGS = [
   {key:'became_customer', label:'خرید کرد'},
 ];
 
+// رتبه‌بندی با آستانه‌های جدید
 const RANK_INFO = {
-  'A+': {color:'var(--rank-a-plus)', desc:'اولویت مطلق – ویزیت فوری و پیگیری سنگین'},
-  'A':  {color:'var(--rank-a)', desc:'اولویت بالا – پیگیری جدی در ۷ روز آینده'},
-  'B':  {color:'var(--rank-b)', desc:'متوسط رو به بالا – پیگیری عادی'},
-  'C':  {color:'var(--rank-c)', desc:'اولویت پایین – فقط در صورت آزاد بودن زمان'},
-  'D':  {color:'var(--rank-d)', desc:'فعلاً ارزش پیگیری ندارد'},
+  'A+': {color:'var(--rank-aplus)', desc:'اولویت مطلق — ویزیت دوباره در ۲ روز آینده'},
+  'A':  {color:'var(--rank-a)',    desc:'اولویت بالا — پیگیری در ۷ روز آینده'},
+  'B':  {color:'var(--rank-b)',    desc:'متوسط — پیگیری عادی در ۱۴ روز'},
+  'C':  {color:'var(--rank-c)',    desc:'پایین — فقط در صورت آزادی زمان'},
+  'D':  {color:'var(--rank-d)',    desc:'فعلاً ارزش پیگیری ندارد'},
 };
 
 function scoreToRank(score){
-  if(score>=90) return 'A+';
-  if(score>=75) return 'A';
-  if(score>=55) return 'B';
-  if(score>=35) return 'C';
+  if(score>=85) return 'A+';
+  if(score>=70) return 'A';
+  if(score>=50) return 'B';
+  if(score>=30) return 'C';
   return 'D';
 }
+
+// محاسبهٔ امتیاز: جمع ساده امتیاز گزینه‌ها — weight = maxScore
+// امتیاز هر گزینه مستقیماً نسبت به وزن سؤال تعیین شده
 function computeScore(answers){
-  let total=0;
+  let total = 0;
   QUESTIONS.forEach(q=>{
-    const opt = q.options.find(o=>o.key===answers[q.id]);
+    const opt = q.options.find(o=>o.key === answers[q.id]);
     if(opt) total += opt.score;
   });
   return total;
 }
+
 function answeredCount(answers){
   return QUESTIONS.filter(q=>answers[q.id]).length;
 }
+function unansweredCount(answers){
+  return QUESTIONS.length - answeredCount(answers);
+}
 
 /* ============================================================
-   بخش ۲-ب: تارگت روزانهٔ ویزیت + پیام‌های انگیزشی
+   بخش ۲: تارگت روزانه + streak + پیام‌های انگیزشی
    ============================================================ */
 const MILESTONE_MESSAGES = {
-  '50': [
-    'نصف راه امروز رو رفتی! همینطور ادامه بده 💪',
-    'رسیدی به نصف تارگت — سرعتت خوبه',
-    'نیمهٔ مسیر امروز تموم شد',
-    'نصف تارگت جا موند سرت، برو نصف دیگه',
-    'نصف راه رو رد کردی، تا تارگت خیلی نمونده',
-  ],
-  '80': [
-    'به تارگت نزدیک شدی! چندتا دیگه مونده',
-    'داری به تارگت امروز می‌رسی — یه فشار آخر بده',
-    'خیلی نزدیکی به هدف امروز، ول نکن',
-    'تارگت امروز داره دستت میاد',
-    'یکی‌دو مغازهٔ دیگه و تارگت امروز کامل میشه',
-  ],
-  '100': [
-    'تارگت امروز رو زدی! 🎯 آفرین',
-    'تموم شد — به عددی که گذاشته بودی رسیدی 🎉',
-    'هدف امروز کامل شد، خسته نباشی',
-    'تارگت امروز پر شد، کارت عالی بود',
-    'رسیدی به همون عددی که خودت تعیین کرده بودی 👏',
-  ],
-  'over': [
-    'از تارگت هم رد شدی، امروز روز خیلی خوبیه 🔥',
-    'بیشتر از برنامه‌ات زدی، همینطور ادامه بده',
-    'تارگت رو رد کردی و همچنان داری می‌زنی',
-    'امروز فراتر از انتظار خودت کار کردی',
-    'رکورد امروزت از تارگت بالاتر رفت 👌',
-  ],
+  '50':['نصف راه امروز رو رفتی! همینطور ادامه بده','رسیدی به نصف تارگت — سرعتت خوبه','نیمهٔ مسیر امروز تموم شد','نصف تارگت جا موند، برو نصف دیگه','نصف راه رو رد کردی، تا تارگت خیلی نمونده'],
+  '80':['به تارگت نزدیک شدی! چندتا دیگه مونده','داری به تارگت می‌رسی — یه فشار آخر بده','خیلی نزدیکی به هدف امروز، ول نکن','تارگت امروز داره دستت میاد','یکی‌دو مغازهٔ دیگه و تارگت کامل میشه'],
+  '100':['تارگت امروز رو زدی! آفرین','تموم شد — به عددی که گذاشته بودی رسیدی','هدف امروز کامل شد، خسته نباشی','تارگت امروز پر شد، کارت عالی بود','رسیدی به همون عددی که خودت تعیین کرده بودی'],
+  'over':['از تارگت هم رد شدی، امروز روز خیلی خوبیه','بیشتر از برنامه‌ات زدی، همینطور ادامه بده','تارگت رو رد کردی و همچنان داری می‌زنی','امروز فراتر از انتظار کار کردی','رکورد امروزت از تارگت بالاتر رفت'],
 };
 const MILESTONE_EMOJI = {'50':'🚶','80':'⚡','100':'🎯','over':'🔥'};
 
@@ -302,22 +648,37 @@ function todayStr(){
   const d = new Date();
   return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 }
-function defaultDailyTarget(prevTarget, prevLastMsg){
-  return { date: todayStr(), target: prevTarget||0, count:0, hit:{}, lastMsg: prevLastMsg||{} };
+function defaultDailyTarget(prevTarget, prevLastMsg, prevStreak){
+  return { date: todayStr(), target: prevTarget||0, count:0, hit:{}, lastMsg: prevLastMsg||{}, streak: prevStreak||0 };
 }
 async function ensureDailyTarget(){
   let rec = await dbGet('meta','dailyTarget');
   let dt = rec ? rec.value : null;
   if(!dt || dt.date !== todayStr()){
-    dt = defaultDailyTarget(dt?dt.target:0, dt?dt.lastMsg:{});
+    // اگر دیروز تارگت را زده بود، streak یکی اضافه کن
+    let newStreak = 0;
+    if(dt && dt.date !== todayStr()){
+      if(dt.target > 0 && dt.count >= dt.target){
+        newStreak = (dt.streak||0) + 1;
+      }
+    }
+    dt = defaultDailyTarget(dt?dt.target:0, dt?dt.lastMsg:{}, newStreak);
     await dbPut('meta', {key:'dailyTarget', value:dt});
   }
   state.dailyTarget = dt;
   return dt;
 }
+let _dtSaveTimer = null;
 async function persistDailyTarget(dt){
   state.dailyTarget = dt;
-  await dbPut('meta', {key:'dailyTarget', value:dt});
+  // throttle برای جلوگیری از race condition
+  if(_dtSaveTimer) clearTimeout(_dtSaveTimer);
+  return new Promise(resolve=>{
+    _dtSaveTimer = setTimeout(async()=>{
+      try{ await dbPut('meta', {key:'dailyTarget', value:dt}); }catch(e){}
+      resolve();
+    }, 300);
+  });
 }
 async function setDailyTargetValue(newTarget){
   const dt = await ensureDailyTarget();
@@ -326,8 +687,7 @@ async function setDailyTargetValue(newTarget){
 }
 async function startNewTargetDay(){
   const dt = await ensureDailyTarget();
-  dt.count = 0;
-  dt.hit = {};
+  dt.count = 0; dt.hit = {};
   await persistDailyTarget(dt);
 }
 function pickMilestoneMessage(category, dt){
@@ -343,11 +703,12 @@ function pickMilestoneMessage(category, dt){
 function showMilestoneMessage(category, dt){
   const msg = pickMilestoneMessage(category, dt);
   openOverlay(
+    '<div class="drag-handle"></div>'+
     '<div style="text-align:center; padding:6px 0 4px">'+
-      '<div style="font-size:36px; margin-bottom:8px">'+MILESTONE_EMOJI[category]+'</div>'+
-      '<h3 style="margin-bottom:8px">'+esc(msg)+'</h3>'+
-      '<div style="color:var(--muted); font-size:13px; margin-bottom:14px">'+faNum(dt.count)+' از '+faNum(dt.target)+' ویزیت امروز</div>'+
-      '<button class="btn btn-primary" data-action="closeOverlay">ادامه</button>'+
+      '<div style="font-size:40px; margin-bottom:8px">'+MILESTONE_EMOJI[category]+'</div>'+
+      '<h3>'+esc(msg)+'</h3>'+
+      '<div style="color:var(--text-2); font-size:var(--r-callout); margin-bottom:16px">'+faNum(dt.count)+' از '+faNum(dt.target)+' ویزیت امروز</div>'+
+      '<button class="btn btn-filled" data-action="closeOverlay">ادامه</button>'+
     '</div>'
   );
 }
@@ -359,10 +720,16 @@ async function registerVisitForTarget(){
   if(dt.target > 0){
     const pct = (dt.count/dt.target)*100;
     let category = null;
-    if(pct>=100 && !dt.hit['100']){ category='100'; dt.hit['100']=true; }
-    else if(pct>=80 && !dt.hit['80']){ category='80'; dt.hit['80']=true; }
-    else if(pct>=50 && !dt.hit['50']){ category='50'; dt.hit['50']=true; }
-    else if(pct>100 && dt.hit['100'] && !dt.hit['over'] && (dt.count-dt.target)>=3){ category='over'; dt.hit['over']=true; }
+    // اصلاح milestone: وقتی ۱۰۰٪ زده شد، ۸۰ و ۵۰ هم ست شوند
+    if(pct>=100 && !dt.hit['100']){
+      category='100'; dt.hit['100']=true; dt.hit['80']=true; dt.hit['50']=true;
+    } else if(pct>=80 && !dt.hit['80']){
+      category='80'; dt.hit['80']=true; dt.hit['50']=true;
+    } else if(pct>=50 && !dt.hit['50']){
+      category='50'; dt.hit['50']=true;
+    } else if(pct>100 && dt.hit['100'] && !dt.hit['over'] && (dt.count-dt.target)>=3){
+      category='over'; dt.hit['over']=true;
+    }
     if(category){
       await persistDailyTarget(dt);
       showMilestoneMessage(category, dt);
@@ -373,53 +740,69 @@ async function registerVisitForTarget(){
   await persistDailyTarget(dt);
 }
 function renderTargetCard(){
-  const dt = state.dailyTarget || defaultDailyTarget(0,{});
+  const dt = state.dailyTarget || defaultDailyTarget(0,{},0);
   if(!dt.target || dt.target<=0){
-    return '<div class="card" id="target-card">'+
-      '<div class="field-label">تارگت ویزیت امروز</div>'+
-      '<div style="font-size:13.5px; color:var(--muted); margin-bottom:10px">هنوز تارگتی برای امروز نذاشتی</div>'+
-      '<button class="btn btn-secondary" data-action="openTargetSheet">تنظیم تارگت امروز</button>'+
-    '</div>';
+    return '<div class="grouped" id="target-card">'+
+      '<div class="row" style="display:flex; align-items:center; justify-content:space-between">'+
+        '<div><div class="field-label" style="margin:0">تارگت ویزیت امروز</div>'+
+        '<div style="font-size:var(--r-callout); color:var(--text-2); margin-top:2px">هنوز تارگتی برای امروز نذاشتی</div></div>'+
+        '<button class="link-btn" data-action="openTargetSheet">تنظیم</button>'+
+      '</div></div>';
   }
   const pct = Math.min(100, Math.round((dt.count/dt.target)*100));
   const over = dt.count > dt.target;
-  return '<div class="card" id="target-card">'+
-    '<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">'+
-      '<div class="field-label" style="margin:0">تارگت ویزیت امروز</div>'+
-      '<button class="link-btn" data-action="openTargetSheet">ویرایش</button>'+
-    '</div>'+
-    '<div style="display:flex; align-items:baseline; gap:6px; margin-bottom:8px">'+
-      '<span style="font-size:22px; font-weight:800">'+faNum(dt.count)+'</span>'+
-      '<span style="color:var(--muted); font-size:14px">از '+faNum(dt.target)+' ویزیت'+(over?' (رد شده ✅)':'')+'</span>'+
-    '</div>'+
-    '<div style="background:var(--surface-2); border-radius:20px; height:8px; overflow:hidden">'+
-      '<div style="width:'+pct+'%; height:100%; background:var(--accent);"></div>'+
-    '</div>'+
-  '</div>';
+  const circumference = 2 * Math.PI * 45;
+  const dashOffset = circumference * (1 - pct/100);
+  const streak = dt.streak || 0;
+  return '<div class="grouped" id="target-card">'+
+    '<div class="row">'+
+      '<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">'+
+        '<div class="field-label" style="margin:0">تارگت ویزیت امروز</div>'+
+        '<button class="link-btn" data-action="openTargetSheet">ویرایش</button>'+
+      '</div>'+
+      '<div style="display:flex; align-items:center; gap:16px">'+
+        '<div style="position:relative; width:100px; height:100px; flex-shrink:0">'+
+          '<svg width="100" height="100" viewBox="0 0 100 100" style="transform:rotate(-90deg)">'+
+            '<circle cx="50" cy="50" r="45" fill="none" stroke="var(--fill)" stroke-width="8"/>'+
+            '<circle cx="50" cy="50" r="45" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" '+
+              'stroke-dasharray="'+circumference+'" stroke-dashoffset="'+dashOffset+'" style="transition:stroke-dashoffset 0.4s var(--ease)"/>'+
+          '</svg>'+
+          '<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center">'+
+            '<div style="font-size:var(--r-title3); font-weight:800">'+faNum(dt.count)+'</div>'+
+            '<div style="font-size:var(--r-caption); color:var(--text-2)">از '+faNum(dt.target)+'</div>'+
+          '</div>'+
+        '</div>'+
+        '<div style="flex:1">'+
+          '<div style="font-size:var(--r-callout); font-weight:600; margin-bottom:4px">'+pct+'٪'+(over?' (رد شده)':'')+'</div>'+
+          (streak>0 ? '<div class="streak-badge">🔥 '+faNum(streak)+' روز پیاپی</div>' : '')+
+        '</div>'+
+      '</div>'+
+    '</div></div>';
 }
 function openTargetSheet(){
-  const dt = state.dailyTarget || defaultDailyTarget(0,{});
+  const dt = state.dailyTarget || defaultDailyTarget(0,{},0);
   openOverlay(
+    '<div class="drag-handle"></div>'+
     '<h3>تارگت ویزیت امروز</h3>'+
     '<div class="field-label">چند ویزیت امروز برنامه داری؟</div>'+
-    '<input type="number" id="target-input" inputmode="numeric" min="1" value="'+(dt.target||'')+'" style="margin-bottom:14px; width:100%; padding:14px 16px; font-size:18px; min-height:48px; border-radius:12px; border:1.5px solid var(--border); background:var(--surface); color:var(--text); box-sizing:border-box;">'+
+    '<input type="number" id="target-input" inputmode="numeric" min="1" value="'+(dt.target||'')+'" style="margin-bottom:14px; font-size:var(--r-title3); min-height:48px">'+
     '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
-    '<button class="btn btn-primary" data-action="saveTargetValue">ذخیره</button></div>'+
+    '<button class="btn btn-filled" data-action="saveTargetValue">ذخیره</button></div>'+
     '<div style="height:10px"></div>'+
-    '<button class="btn btn-danger" data-action="askStartNewDay">شروع روز جدید (ریست شمارنده امروز)</button>'
+    '<button class="btn btn-danger" data-action="askStartNewDay">شروع روز جدید (ریست شمارنده)</button>'
   );
 }
 async function handleSaveTargetValue(){
   const input = document.getElementById('target-input');
-  const val = parseInt((input.value||'').trim(), 10);
+  let val = parseInt(String(input.value||'').replace(/[۰-۹]/g, d=>String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d))).trim(), 10);
   if(!val || val<=0){ showToast('یک عدد معتبر وارد کن'); return; }
   await setDailyTargetValue(val);
   closeOverlay();
   render();
-  showToast('تارگت امروز ذخیره شد ✅');
+  showToast('تارگت امروز ذخیره شد');
 }
 function confirmStartNewDay(){
-  openOverlay('<h3>شروع روز جدید</h3><p>شمارندهٔ ویزیت امروز صفر شود؟ تارگت فعلی حفظ می‌شود.</p>'+
+  openOverlay('<div class="drag-handle"></div><h3>شروع روز جدید</h3><p style="color:var(--text-2); margin-bottom:16px">شمارندهٔ ویزیت امروز صفر شود؟ تارگت فعلی حفظ می‌شود.</p>'+
     '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
     '<button class="btn btn-danger" data-action="confirmStartNewDayYes">بله، ریست کن</button></div>');
 }
@@ -427,33 +810,37 @@ async function handleStartNewDayConfirmed(){
   await startNewTargetDay();
   closeOverlay();
   render();
-  showToast('روز جدید شروع شد 🌅');
+  showToast('روز جدید شروع شد');
 }
 
 /* ============================================================
-   بخش ۲: توابع کمکی عمومی
+   بخش ۳: توابع کمکی
    ============================================================ */
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,9); }
 function nowISO(){ return new Date().toISOString(); }
 function esc(s){
   return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
-function faNum(n){ try{ return Number(n).toLocaleString('fa-IR'); }catch(e){ return String(n); } }
+function faNum(n){
+  try{ return Number(n).toLocaleString('fa-IR'); }catch(e){ return String(n); }
+}
 function faDate(iso){
   try{
     const d = new Date(iso);
-    return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
-  }catch(e){
-    return (iso||'').slice(0,10);
-  }
+    return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric'}).format(d);
+  }catch(e){ return (iso||'').slice(0,10); }
 }
 function faDateTime(iso){
   try{
     const d = new Date(iso);
-    const date = new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
+    const date = new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric'}).format(d);
     const time = new Intl.DateTimeFormat('fa-IR',{hour:'2-digit',minute:'2-digit'}).format(d);
     return date+' - '+time;
   }catch(e){ return (iso||''); }
+}
+// تبدیل ارقام فارسی به انگلیسی
+function faToEnDigits(s){
+  return String(s).replace(/[۰-۹]/g, d=>String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d)));
 }
 let toastTimer=null;
 function showToast(msg){
@@ -461,17 +848,36 @@ function showToast(msg){
   t.textContent = msg;
   t.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>t.classList.remove('show'), 1800);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 2000);
 }
-function closeOverlay(){ document.getElementById('overlay-root').innerHTML=''; }
+
+// Overlay stack — پشتیبانی از sheet روی sheet
+let _overlayStack = [];
+function closeOverlay(){
+  if(_overlayStack.length>0){
+    _overlayStack.pop();
+    if(_overlayStack.length>0){
+      document.getElementById('overlay-root').innerHTML = _overlayStack[_overlayStack.length-1];
+    } else {
+      document.getElementById('overlay-root').innerHTML = '';
+    }
+  } else {
+    document.getElementById('overlay-root').innerHTML = '';
+  }
+}
 function openOverlay(innerHtml){
-  document.getElementById('overlay-root').innerHTML =
-    '<div class="overlay" data-action="closeOverlayBg"><div class="sheet">'+innerHtml+'</div></div>';
+  const html = '<div class="overlay" data-action="closeOverlayBg"><div class="sheet">'+innerHtml+'</div></div>';
+  _overlayStack.push(html);
+  document.getElementById('overlay-root').innerHTML = _overlayStack[_overlayStack.length-1];
+}
+function closeAllOverlays(){
+  _overlayStack = [];
+  document.getElementById('overlay-root').innerHTML = '';
 }
 async function copyText(text){
   try{
     await navigator.clipboard.writeText(text);
-    showToast('کپی شد ✅');
+    showToast('کپی شد');
     return;
   }catch(e){}
   try{
@@ -480,17 +886,18 @@ async function copyText(text){
     document.body.appendChild(ta); ta.focus(); ta.select();
     const ok = document.execCommand('copy');
     document.body.removeChild(ta);
-    if(ok){ showToast('کپی شد ✅'); return; }
+    if(ok){ showToast('کپی شد'); return; }
   }catch(e){}
   openOverlay(
-    '<h3>کپی گزارش</h3><p class="field-label">کپی خودکار ممکن نشد؛ متن زیر را انتخاب و کپی کنید:</p>'+
-    '<textarea class="copy-area" readonly onclick="this.select()">'+esc(text)+'</textarea>'+
+    '<div class="drag-handle"></div><h3>کپی گزارش</h3>'+
+    '<p class="field-label">کپی خودکار ممکن نشد؛ متن زیر را انتخاب و کپی کنید:</p>'+
+    '<textarea class="copy-area" readonly style="width:100%; height:160px; border-radius:10px; border:none; background:var(--surface-2); color:var(--text); padding:10px; font-size:var(--r-footnote); font-family:inherit; resize:none">'+esc(text)+'</textarea>'+
     '<div style="height:10px"></div><button class="btn btn-secondary" data-action="closeOverlay">بستن</button>'
   );
 }
 
 /* ============================================================
-   بخش ۳: لایه IndexedDB
+   بخش ۴: IndexedDB
    ============================================================ */
 let dbInstance = null;
 function openDatabase(){
@@ -531,18 +938,20 @@ function dbDelete(name,key){
     r.onsuccess=()=>resolve(true); r.onerror=()=>reject(r.error);
   });
 }
-function dbReplaceAll(name, items){
+// import atomicity: دو store در یک تراکنش
+function dbReplaceAllAtomic(shops, routes){
   return new Promise((resolve,reject)=>{
-    const tx = dbInstance.transaction(name,'readwrite');
-    const os = tx.objectStore(name);
-    os.clear();
-    items.forEach(it=>os.put(it));
+    const tx = dbInstance.transaction(['shops','routes'],'readwrite');
+    tx.objectStore('shops').clear();
+    tx.objectStore('routes').clear();
+    shops.forEach(it=>tx.objectStore('shops').put(it));
+    routes.forEach(it=>tx.objectStore('routes').put(it));
     tx.oncomplete=()=>resolve(true); tx.onerror=()=>reject(tx.error);
   });
 }
 
 /* ============================================================
-   بخش ۴: نرمال‌سازی داده‌ها (سازگاری به عقب و آینده)
+   بخش ۵: نرمال‌سازی داده‌ها
    ============================================================ */
 function normalizeVisit(raw){
   return {
@@ -551,14 +960,14 @@ function normalizeVisit(raw){
     answers: (raw.answers && typeof raw.answers==='object') ? raw.answers : {},
     score: typeof raw.score==='number' ? raw.score : 0,
     rank: raw.rank || scoreToRank(typeof raw.score==='number'?raw.score:0),
-    scoringVersion: raw.scoringVersion || 1,
+    scoringVersion: raw.scoringVersion || SCORING_VERSION,
     tags: Array.isArray(raw.tags) ? raw.tags : [],
   };
 }
 function normalizeShop(raw){
   return {
     id: raw.id || uid(),
-    schemaVersion: 1,
+    schemaVersion: 2,
     name: raw.name || '(بدون نام)',
     routeId: raw.routeId || null,
     neighborhoodId: raw.neighborhoodId || null,
@@ -567,13 +976,14 @@ function normalizeShop(raw){
     updatedAt: raw.updatedAt || raw.createdAt || nowISO(),
     latestScore: typeof raw.latestScore==='number' ? raw.latestScore : 0,
     latestRank: raw.latestRank || scoreToRank(typeof raw.latestScore==='number'?raw.latestScore:0),
+    nextFollowUp: raw.nextFollowUp || null,
     visits: Array.isArray(raw.visits) ? raw.visits.map(normalizeVisit) : [],
   };
 }
 function normalizeRoute(raw){
   return {
     id: raw.id || uid(),
-    schemaVersion: 1,
+    schemaVersion: 2,
     name: raw.name || '(بدون نام)',
     createdAt: raw.createdAt || nowISO(),
     neighborhoods: Array.isArray(raw.neighborhoods) ? raw.neighborhoods.map(n=>({id:n.id||uid(), name:n.name||''})) : [],
@@ -581,7 +991,7 @@ function normalizeRoute(raw){
 }
 
 /* ============================================================
-   بخش ۵: وضعیت کلی برنامه
+   بخش ۶: وضعیت کلی
    ============================================================ */
 const state = {
   shops: [],
@@ -593,16 +1003,21 @@ const state = {
   listSort: 'score_desc',
   listFilterRoute: '',
   listFilterRank: '',
+  listSegment: 'all',
+  dailyTarget: null,
 };
 const formState = {
-  mode: 'new',        // 'new' یا 'visit'
+  mode: 'new',
   shopId: null,
   name: '',
   routeId: null,
   neighborhoodId: null,
   answers: {},
   tags: [],
+  newNeighborhoodName: '',
 };
+const routesViewState = { expanded:{}, editingRoute:null, editingNeigh:null };
+let _draftSaveTimer = null;
 
 async function loadAllData(){
   const [shopsRaw, routesRaw, themeMeta] = await Promise.all([
@@ -615,16 +1030,63 @@ async function loadAllData(){
 }
 function applyTheme(){
   document.documentElement.setAttribute('data-theme', state.theme);
-  document.getElementById('theme-toggle').textContent = state.theme==='dark' ? '☀️' : '🌙';
+  try{ localStorage.setItem('theme', state.theme); }catch(e){}
 }
 async function toggleTheme(){
   state.theme = state.theme==='dark' ? 'light' : 'dark';
   applyTheme();
   await dbPut('meta', {key:'theme', value:state.theme});
+  render();
 }
 
+// حفظ خودکار draft در localStorage
+function saveDraftToStorage(){
+  try{
+    const draft = {
+      mode: formState.mode,
+      shopId: formState.shopId,
+      name: formState.name,
+      routeId: formState.routeId,
+      neighborhoodId: formState.neighborhoodId,
+      answers: {...formState.answers},
+      tags: [...formState.tags],
+    };
+    localStorage.setItem('formDraft', JSON.stringify(draft));
+  }catch(e){}
+}
+function loadDraftFromStorage(){
+  try{
+    const raw = localStorage.getItem('formDraft');
+    if(!raw) return false;
+    const draft = JSON.parse(raw);
+    if(draft.mode === 'new'){
+      formState.mode = 'new';
+      formState.shopId = null;
+      formState.name = draft.name || '';
+      formState.routeId = draft.routeId || null;
+      formState.neighborhoodId = draft.neighborhoodId || null;
+      formState.answers = draft.answers || {};
+      formState.tags = draft.tags || [];
+      return true;
+    }
+  }catch(e){}
+  return false;
+}
+function clearDraftFromStorage(){
+  try{ localStorage.removeItem('formDraft'); }catch(e){}
+}
+
+// visibilitychange — وقتی اپ به فورگراند برگشت، اگر روز عوض شده، dailyTarget ریست شود
+document.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState === 'visible'){
+    if(state.dailyTarget && state.dailyTarget.date !== todayStr()){
+      ensureDailyTarget().then(()=>render());
+    }
+  }
+});
+
 /* ============================================================
-   بخش ۶: عملیات مغازه‌ها
+   بخش ۷: عملیات مغازه‌ها
    ============================================================ */
 function routeName(routeId){
   const r = state.routes.find(x=>x.id===routeId);
@@ -655,6 +1117,7 @@ async function createShopFromForm(){
   await persistShop(shop);
   state.shops.push(shop);
   await registerVisitForTarget();
+  clearDraftFromStorage();
   return shop;
 }
 async function addVisitFromForm(){
@@ -688,9 +1151,15 @@ async function deleteVisit(shopId, visitId){
   }
   await persistShop(shop);
 }
+async function setNextFollowUp(shopId, dateISO){
+  const shop = state.shops.find(s=>s.id===shopId);
+  if(!shop) return;
+  shop.nextFollowUp = dateISO;
+  await persistShop(shop);
+}
 
 /* ============================================================
-   بخش ۷: عملیات مسیرها / محله‌ها
+   بخش ۸: عملیات مسیرها / محله‌ها
    ============================================================ */
 async function addRoute(name){
   const route = normalizeRoute({name});
@@ -705,6 +1174,10 @@ async function renameRoute(id, name){
 async function deleteRouteById(id){
   state.routes = state.routes.filter(r=>r.id!==id);
   await dbDelete('routes', id);
+  // پاک کردن route های stale از shops
+  state.shops.forEach(s=>{
+    if(s.routeId === id){ s.routeId = null; s.neighborhoodId = null; }
+  });
 }
 async function addNeighborhood(routeId, name){
   const r = state.routes.find(x=>x.id===routeId); if(!r) return;
@@ -720,10 +1193,14 @@ async function deleteNeighborhoodById(routeId, nId){
   const r = state.routes.find(x=>x.id===routeId); if(!r) return;
   r.neighborhoods = r.neighborhoods.filter(x=>x.id!==nId);
   await dbPut('routes', r);
+  // پاک کردن stale neighborhood از shops
+  state.shops.forEach(s=>{
+    if(s.routeId===routeId && s.neighborhoodId===nId){ s.neighborhoodId = null; }
+  });
 }
 
 /* ============================================================
-   بخش ۸: رندر - قالب‌های مشترک
+   بخش ۹: رندر — قالب‌های مشترک
    ============================================================ */
 function rankPillHtml(rank, size){
   const info = RANK_INFO[rank] || RANK_INFO['D'];
@@ -734,9 +1211,21 @@ function chip(group, value, label, selected, multi){
   const cls = 'chip'+(selected?' chip-selected':'');
   return '<button type="button" class="'+cls+'" data-chip="'+esc(group)+'" data-value="'+esc(value)+'" data-multi="'+(multi?'1':'0')+'">'+esc(label)+'</button>';
 }
+function chevronSvg(){
+  return '<svg class="chevron" width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+}
+
+// Navigation bar تنظیم
+function setNavBar(title, leftHtml, rightHtml, large){
+  const nb = document.getElementById('navbar');
+  nb.classList.toggle('large-title', !!large);
+  document.getElementById('nav-title').textContent = title;
+  document.getElementById('nav-left').innerHTML = leftHtml || '';
+  document.getElementById('nav-right').innerHTML = rightHtml || '';
+}
 
 /* ============================================================
-   بخش ۹: رندر - نمای ثبت سریع (فرم اصلی)
+   بخش ۱۰: رندر — فرم ثبت
    ============================================================ */
 function resetEntryFormForNew(keepRouteContext){
   formState.mode = 'new';
@@ -745,6 +1234,8 @@ function resetEntryFormForNew(keepRouteContext){
   if(!keepRouteContext){ formState.routeId=null; formState.neighborhoodId=null; }
   formState.answers = {};
   formState.tags = [];
+  formState.newNeighborhoodName = '';
+  clearDraftFromStorage();
 }
 function loadEntryFormForVisit(shopId){
   const shop = state.shops.find(s=>s.id===shopId);
@@ -759,47 +1250,63 @@ function loadEntryFormForVisit(shopId){
 }
 
 function renderEntryView(){
+  setNavBar('ثبت', '', '<button class="nav-btn" data-action="toggleTheme">'+(state.theme==='dark'?'☀️':'🌙')+'</button>', false);
+
   if(state.routes.length===0 && formState.mode==='new'){
-    return '<h2 class="view-title">ثبت مغازه جدید</h2>'+
-      '<div class="empty-state"><div class="big">🗺️</div>'+
+    return '<div class="empty-state"><div class="big">🗺️</div>'+
       'برای شروع، اول باید حداقل یک «مسیر» بسازی.'+
       '<div style="height:14px"></div>'+
-      '<button class="btn btn-primary" data-action="goRoutes">ساخت اولین مسیر</button></div>';
+      '<button class="btn btn-filled" data-action="goRoutes">ساخت اولین مسیر</button></div>';
   }
 
   const isVisit = formState.mode==='visit';
   const title = isVisit ? 'ثبت ویزیت جدید' : 'ثبت مغازه جدید';
 
-  let html = '<h2 class="view-title">'+title+'</h2>';
+  let html = '<div style="font-size:var(--r-title1); font-weight:700; margin:8px 0 14px">'+title+'</div>';
 
   // کارت تارگت روزانه
   html += renderTargetCard();
 
   // نام مغازه
   if(isVisit){
-    html += '<div class="card"><div class="field-label">مغازه</div><div style="font-weight:800; font-size:16px">'+esc(formState.name)+'</div>'+
-      '<div class="sub" style="color:var(--muted); font-size:12.5px; margin-top:4px">'+esc(routeName(formState.routeId))+' • '+esc(neighborhoodName(formState.routeId, formState.neighborhoodId))+'</div></div>';
+    html += '<div class="grouped"><div class="row"><div class="field-label">مغازه</div>'+
+      '<div style="font-weight:700; font-size:var(--r-body)">'+esc(formState.name)+'</div>'+
+      '<div class="sub" style="color:var(--text-2); font-size:var(--r-footnote); margin-top:4px">'+esc(routeName(formState.routeId))+(formState.neighborhoodId?' • '+esc(neighborhoodName(formState.routeId, formState.neighborhoodId)):'')+'</div>'+
+    '</div></div>';
   } else {
-    html += '<div class="card"><div class="field-label">نام مغازه</div>'+
-      '<input type="text" id="shop-name-input" placeholder="مثلاً: سوپر رویان" value="'+esc(formState.name)+'" autocomplete="off">'+
-      '</div>';
+    html += '<div class="field-label">نام مغازه</div>'+
+      '<input type="text" id="shop-name-input" placeholder="مثلاً: سوپر رویان" value="'+esc(formState.name)+'" autocomplete="off" style="margin-bottom:14px">';
 
     // انتخاب مسیر
-    html += '<div class="card"><div class="field-label">مسیر</div><div class="chip-wrap" data-chip-group="route">';
+    html += '<div class="field-label">مسیر</div><div class="chip-wrap" data-chip-group="route" style="margin-bottom:14px">';
     state.routes.forEach(r=>{ html += chip('route', r.id, r.name, formState.routeId===r.id, false); });
-    html += '</div></div>';
+    html += '</div>';
 
-    // انتخاب محله (وابسته به مسیر)
-    html += '<div class="card" id="neighborhood-card" style="'+(formState.routeId?'':'display:none;')+'">'+
-      '<div class="field-label">محله / خیابان (اختیاری)</div>'+
-      '<div class="chip-wrap" id="neighborhood-chips" data-chip-group="neighborhood">'+renderNeighborhoodChipsInner()+'</div></div>';
+    // انتخاب محله (وابسته به مسیر) + افزودن محله جدید
+    if(formState.routeId){
+      const r = state.routes.find(x=>x.id===formState.routeId);
+      html += '<div class="field-label">محله / خیابان (اختیاری)</div>'+
+        '<div class="chip-wrap" id="neighborhood-chips" data-chip-group="neighborhood" style="margin-bottom:8px">';
+      if(r && r.neighborhoods.length>0){
+        r.neighborhoods.forEach(n=>{
+          html += chip('neighborhood', n.id, n.name, formState.neighborhoodId===n.id, false);
+        });
+      } else {
+        html += '<span style="color:var(--text-3); font-size:var(--r-footnote)">این مسیر محله‌ای ندارد</span>';
+      }
+      html += '</div>'+
+        '<div style="display:flex; gap:8px; margin-bottom:14px">'+
+        '<input type="text" id="new-neigh-input" placeholder="افزودن محله جدید…" value="'+esc(formState.newNeighborhoodName)+'" style="flex:1">'+
+        '<button class="btn btn-tinted" style="width:auto; padding:0 16px; min-height:44px" data-action="addNeighFromForm">افزودن</button>'+
+        '</div>';
+    }
   }
 
   // نمره لحظه‌ای
   html += renderLiveScorePanel();
 
-  // ۱۰ سوال
-  html += '<div class="card">';
+  // ۱۰ سؤال
+  html += '<div class="field-label">ارزیابی</div><div class="grouped" style="padding:12px 16px; margin-bottom:14px">';
   QUESTIONS.forEach((q,idx)=>{
     html += '<div class="q-block"><div class="q-title"><span class="q-num">'+faNum(idx+1)+'</span>'+esc(q.label)+'</div>'+
       '<div class="chip-wrap" data-chip-group="'+q.id+'">';
@@ -810,42 +1317,57 @@ function renderEntryView(){
   });
   html += '</div>';
 
-  // برچسب‌های نتیجه ویزیت (چندانتخابی)
-  html += '<div class="card"><div class="field-label">🎯 نتیجه این ویزیت (اختیاری، چندتایی)</div>'+
-    '<div class="chip-wrap" data-chip-group="tags">';
+  // برچسب‌های نتیجه ویزیت
+  html += '<div class="field-label">نتیجه این ویزیت (اختیاری، چندتایی)</div>'+
+    '<div class="chip-wrap" data-chip-group="tags" style="margin-bottom:14px">';
   VISIT_TAGS.forEach(t=>{
     html += chip('tags', t.key, t.label, formState.tags.includes(t.key), true);
   });
-  html += '</div></div>';
+  html += '</div>';
 
-  // دکمه ثبت
+  // hint سؤالات بی‌پاسخ
+  const unanswered = unansweredCount(formState.answers);
+  if(unanswered > 0){
+    html += '<div class="unanswered-hint">'+faNum(unanswered)+' سؤال بی‌پاسخ</div>';
+  }
+
+  // دلیل غیرفعال بودن دکمه ثبت
   const saveLabel = isVisit ? 'ثبت ویزیت' : 'ثبت و مغازه بعدی';
-  html += '<div class="sticky-save"><button class="btn btn-primary" id="save-entry-btn" data-action="saveEntry">'+saveLabel+'</button>'+
-    (isVisit ? '<div style="height:8px"></div><button class="btn btn-secondary" data-action="cancelVisit">انصراف</button>' : '')+
-    '</div>';
+  const nameOk = isVisit ? true : formState.name.trim().length>0;
+  const answeredOk = answeredCount(formState.answers) === QUESTIONS.length;
+  const routeOk = isVisit ? true : !!formState.routeId;
+  const canSave = nameOk && answeredOk && routeOk;
+
+  html += '<div class="sticky-save"><button class="btn btn-filled" id="save-entry-btn" data-action="saveEntry"'+(canSave?'':' disabled')+'>'+saveLabel+'</button>';
+  if(!canSave){
+    let reason = '';
+    if(!routeOk) reason = 'ابتدا یک مسیر انتخاب کن';
+    else if(!nameOk) reason = 'نام مغازه را وارد کن';
+    else if(!answeredOk) reason = 'به همهٔ '+faNum(QUESTIONS.length)+' سؤال پاسخ بده';
+    html += '<div class="unanswered-hint" style="text-align:center; margin-top:6px">'+reason+'</div>';
+  }
+  if(isVisit){
+    html += '<div style="height:8px"></div><button class="btn btn-secondary" data-action="cancelVisit">انصراف</button>';
+  }
+  html += '</div>';
 
   return html;
-}
-function renderNeighborhoodChipsInner(){
-  const r = state.routes.find(x=>x.id===formState.routeId);
-  if(!r || r.neighborhoods.length===0) return '<span style="color:var(--muted); font-size:13px">این مسیر محله‌ای ندارد</span>';
-  return r.neighborhoods.map(n=>chip('neighborhood', n.id, n.name, formState.neighborhoodId===n.id, false)).join('');
 }
 function renderLiveScorePanel(){
   const score = computeScore(formState.answers);
   const rank = scoreToRank(score);
-  const info = RANK_INFO[rank];
+  const info = RANK_INFO[rank] || RANK_INFO['D'];
   const answered = answeredCount(formState.answers);
   return '<div class="live-score" id="live-score-panel">'+
     '<div><div class="num" id="live-score-value">'+faNum(score)+'</div>'+
     '<div class="sub" id="live-score-sub">'+faNum(answered)+' از '+faNum(QUESTIONS.length)+' سؤال پاسخ داده شده</div></div>'+
     '<div style="text-align:left"><span class="rank-badge" id="live-score-rank" style="background:'+info.color+'">'+rank+'</span>'+
-    '<div class="sub" style="margin-top:4px">'+info.desc+'</div></div></div>';
+    '<div class="rank-desc">'+info.desc+'</div></div></div>';
 }
 function updateLiveScoreUI(){
   const score = computeScore(formState.answers);
   const rank = scoreToRank(score);
-  const info = RANK_INFO[rank];
+  const info = RANK_INFO[rank] || RANK_INFO['D'];
   const answered = answeredCount(formState.answers);
   const valEl = document.getElementById('live-score-value');
   const subEl = document.getElementById('live-score-sub');
@@ -854,14 +1376,38 @@ function updateLiveScoreUI(){
   if(subEl) subEl.textContent = faNum(answered)+' از '+faNum(QUESTIONS.length)+' سؤال پاسخ داده شده';
   if(rankEl){ rankEl.textContent = rank; rankEl.style.background = info.color; }
   updateSaveButtonState();
+  // به‌روزرسانی hint بی‌پاسخ
+  const hint = document.querySelector('.unanswered-hint');
+  if(hint){
+    const unanswered = unansweredCount(formState.answers);
+    if(unanswered>0){
+      hint.textContent = faNum(unanswered)+' سؤال بی‌پاسخ';
+    }
+  }
 }
 function updateSaveButtonState(){
   const btn = document.getElementById('save-entry-btn');
   if(!btn) return;
-  const nameOk = formState.mode==='visit' ? true : formState.name.trim().length>0;
+  const isVisit = formState.mode==='visit';
+  const nameOk = isVisit ? true : formState.name.trim().length>0;
   const answeredOk = answeredCount(formState.answers) === QUESTIONS.length;
-  const routeOk = formState.mode==='visit' ? true : !!formState.routeId;
-  btn.disabled = !(nameOk && answeredOk && routeOk);
+  const routeOk = isVisit ? true : !!formState.routeId;
+  const canSave = nameOk && answeredOk && routeOk;
+  btn.disabled = !canSave;
+  // به‌روزرسانی دلیل
+  const hint = btn.parentElement.querySelector('.unanswered-hint');
+  if(hint){
+    if(canSave){
+      hint.style.display = 'none';
+    } else {
+      hint.style.display = '';
+      let reason = '';
+      if(!routeOk) reason = 'ابتدا یک مسیر انتخاب کن';
+      else if(!nameOk) reason = 'نام مغازه را وارد کن';
+      else if(!answeredOk) reason = 'به همهٔ '+faNum(QUESTIONS.length)+' سؤال پاسخ بده';
+      hint.textContent = reason;
+    }
+  }
 }
 function updateChipGroupSingle(group, selectedValue){
   const cont = document.querySelector('[data-chip-group="'+group+'"]');
@@ -886,32 +1432,57 @@ async function handleSaveEntry(){
     if(formState.mode==='visit'){
       const shop = await addVisitFromForm();
       if(!lastVisitShowedMilestone){
-        showToast(shop && shop.status==='converted' ? 'ثبت شد — مشتری شد! 🎉' : 'ویزیت ثبت شد ✅');
+        showToast(shop && shop.status==='converted' ? 'ثبت شد — مشتری شد!' : 'ویزیت ثبت شد');
       }
       state.detailShopId = formState.shopId;
       state.view = 'detail';
       render();
     } else {
       await createShopFromForm();
-      if(!lastVisitShowedMilestone) showToast('مغازه ثبت شد ✅');
+      if(!lastVisitShowedMilestone) showToast('مغازه ثبت شد');
       resetEntryFormForNew(true);
       render();
       const nameInput = document.getElementById('shop-name-input');
       if(nameInput) nameInput.focus();
     }
   } catch(e){
-    showToast('خطا در ذخیره‌سازی ⚠️');
+    showToast('خطا در ذخیره‌سازی');
     if(btn) btn.disabled = false;
   }
 }
 
+// افزودن محله از داخل فرم
+async function handleAddNeighFromForm(){
+  const input = document.getElementById('new-neigh-input');
+  if(!input) return;
+  const name = faToEnDigits(input.value||'').trim();
+  if(!name){ showToast('نام محله را وارد کن'); return; }
+  await addNeighborhood(formState.routeId, name);
+  formState.newNeighborhoodName = '';
+  saveDraftToStorage();
+  render();
+  showToast('محله اضافه شد');
+}
+
 /* ============================================================
-   بخش ۱۰: رندر - لیست مغازه‌ها
+   بخش ۱۱: رندر — لیست مغازه‌ها
    ============================================================ */
 function getFilteredSortedShops(){
   let list = state.shops.slice();
-  const q = state.listSearch.trim();
-  if(q) list = list.filter(s=>s.name.includes(q));
+  // segment filter
+  if(state.listSegment==='converted'){
+    list = list.filter(s=>s.status==='converted');
+  } else if(state.listSegment==='active'){
+    list = list.filter(s=>s.status==='active');
+  } else if(state.listSegment==='A+'){
+    list = list.filter(s=>s.latestRank==='A+');
+  } else if(state.listSegment==='A'){
+    list = list.filter(s=>s.latestRank==='A');
+  } else if(state.listSegment==='B'){
+    list = list.filter(s=>s.latestRank==='B');
+  }
+  const q = faToEnDigits(state.listSearch.trim());
+  if(q) list = list.filter(s=>s.name.includes(state.listSearch.trim()));
   if(state.listFilterRoute) list = list.filter(s=>s.routeId===state.listFilterRoute);
   if(state.listFilterRank) list = list.filter(s=>s.latestRank===state.listFilterRank);
   switch(state.listSort){
@@ -925,26 +1496,52 @@ function getFilteredSortedShops(){
   return list;
 }
 function renderListView(){
-  let html = '<h2 class="view-title">لیست مغازه‌ها ('+faNum(state.shops.length)+')</h2>';
-  html += '<input type="search" id="list-search-input" placeholder="جستجوی نام مغازه…" value="'+esc(state.listSearch)+'" style="margin-bottom:10px">';
-  html += '<div class="row-inline">'+
-    '<select id="sort-select">'+
-      '<option value="score_desc"'+(state.listSort==='score_desc'?' selected':'')+'>امتیاز (زیاد به کم)</option>'+
-      '<option value="score_asc"'+(state.listSort==='score_asc'?' selected':'')+'>امتیاز (کم به زیاد)</option>'+
+  setNavBar('لیست مغازه‌ها', '', '<button class="nav-btn" data-action="toggleTheme">'+(state.theme==='dark'?'☀️':'🌙')+'</button>', true);
+
+  let html = '';
+
+  // Segment Control
+  html += '<div class="segment-control">';
+  const segments = [
+    {key:'all', label:'همه'},
+    {key:'A+', label:'A+'},
+    {key:'A', label:'A'},
+    {key:'B', label:'B'},
+    {key:'converted', label:'مشتری'},
+    {key:'active', label:'فعال'},
+  ];
+  segments.forEach(s=>{
+    html += '<button data-action="setSegment" data-segment="'+s.key+'"'+(state.listSegment===s.key?' class="active"':'')+'>'+s.label+'</button>';
+  });
+  html += '</div>';
+
+  // Search Bar
+  html += '<div class="search-bar'+(state.listSearch?' active':'')+'" id="search-bar-wrap">'+
+    '<svg class="search-icon" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="2"/><line x1="11" y1="11" x2="15" y2="15" stroke="currentColor" stroke-width="2"/></svg>'+
+    '<input type="search" id="list-search-input" placeholder="جستجوی نام مغازه…" value="'+esc(state.listSearch)+'">'+
+    '<button class="search-cancel" data-action="clearSearch">انصراف</button>'+
+  '</div>';
+
+  // فیلترها
+  html += '<div style="display:flex; gap:8px; margin-bottom:12px">'+
+    '<select id="sort-select" style="flex:1">'+
+      '<option value="score_desc"'+(state.listSort==='score_desc'?' selected':'')+'>امتیاز (زیاد→کم)</option>'+
+      '<option value="score_asc"'+(state.listSort==='score_asc'?' selected':'')+'>امتیاز (کم→زیاد)</option>'+
       '<option value="date_desc"'+(state.listSort==='date_desc'?' selected':'')+'>جدیدترین</option>'+
       '<option value="date_asc"'+(state.listSort==='date_asc'?' selected':'')+'>قدیمی‌ترین</option>'+
       '<option value="name"'+(state.listSort==='name'?' selected':'')+'>نام</option>'+
       '<option value="route"'+(state.listSort==='route'?' selected':'')+'>مسیر</option>'+
     '</select>'+
-    '<select id="filter-route-select">'+
+    '<select id="filter-route-select" style="flex:1">'+
       '<option value="">همه مسیرها</option>'+
       state.routes.map(r=>'<option value="'+esc(r.id)+'"'+(state.listFilterRoute===r.id?' selected':'')+'>'+esc(r.name)+'</option>').join('')+
     '</select>'+
+    '<select id="filter-rank-select" style="flex:1">'+
+      '<option value="">همه رتبه‌ها</option>'+
+      ['A+','A','B','C','D'].map(r=>'<option value="'+r+'"'+(state.listFilterRank===r?' selected':'')+'>رتبه '+r+'</option>').join('')+
+    '</select>'+
   '</div>';
-  html += '<div class="row-inline"><select id="filter-rank-select" style="flex:1">'+
-    '<option value="">همه رتبه‌ها</option>'+
-    ['A+','A','B','C','D'].map(r=>'<option value="'+r+'"'+(state.listFilterRank===r?' selected':'')+'>رتبه '+r+'</option>').join('')+
-    '</select></div>';
+
   html += '<div id="list-results">'+renderListResultsInner()+'</div>';
   return html;
 }
@@ -953,49 +1550,89 @@ function renderListResultsInner(){
   if(list.length===0){
     return '<div class="empty-state"><div class="big">🔍</div>موردی پیدا نشد</div>';
   }
-  return list.map(s=>{
-    const info = RANK_INFO[s.latestRank];
+  return '<div class="grouped">'+list.map(s=>{
+    const info = RANK_INFO[s.latestRank] || RANK_INFO['D'];
     return '<div class="shop-row" data-action="openDetail" data-id="'+esc(s.id)+'">'+
       '<div class="meta">'+
-        '<div class="name">'+esc(s.name)+(s.status==='converted'?' ✅':'')+'</div>'+
+        '<div class="name">'+esc(s.name)+(s.status==='converted'?' ✓':'')+'</div>'+
         '<div class="sub">'+esc(routeName(s.routeId))+(s.neighborhoodId?' • '+esc(neighborhoodName(s.routeId,s.neighborhoodId)):'')+' • '+faDate(s.updatedAt)+'</div>'+
       '</div>'+
-      '<div style="display:flex; align-items:center; gap:8px; flex-shrink:0">'+
-        '<span style="font-weight:800">'+faNum(s.latestScore)+'</span>'+rankPillHtml(s.latestRank)+
-      '</div></div>';
-  }).join('');
+      '<span style="font-weight:700; font-size:var(--r-body)">'+faNum(s.latestScore)+'</span>'+
+      rankPillHtml(s.latestRank)+
+      chevronSvg()+
+    '</div>';
+  }).join('')+'</div>';
 }
 
 /* ============================================================
-   بخش ۱۱: رندر - جزئیات مغازه
+   بخش ۱۲: رندر — جزئیات مغازه
    ============================================================ */
 function renderDetailView(){
   const shop = state.shops.find(s=>s.id===state.detailShopId);
   if(!shop){ state.view='list'; return renderListView(); }
   const lastVisit = shop.visits[shop.visits.length-1];
-  let html = '<button class="link-btn" data-action="backToList">→ بازگشت به لیست</button>';
-  html += '<h2 class="view-title">'+esc(shop.name)+'</h2>';
+
+  setNavBar(shop.name, '<button class="nav-btn" data-action="backToList">→ لیست</button>', '', false);
+
+  let html = '';
 
   if(shop.status==='converted'){
-    html += '<div class="converted-banner">✅ این مغازه مشتری شده — می‌توانید اطلاعات را برای CRM اصلی کپی کنید.</div>';
+    html += '<div class="converted-banner">✓ این مغازه مشتری شده — می‌توانید اطلاعات را برای CRM اصلی کپی کنید.</div>';
   }
 
-  html += '<div class="card" style="display:flex; align-items:center; justify-content:space-between">'+
-    '<div><div style="font-size:30px; font-weight:800">'+faNum(shop.latestScore)+'</div>'+
-    '<div class="sub" style="color:var(--muted); font-size:12.5px">'+esc(routeName(shop.routeId))+' • '+esc(neighborhoodName(shop.routeId,shop.neighborhoodId))+'</div></div>'+
+  // کارت امتیاز + sparkline
+  html += '<div class="grouped"><div class="row" style="display:flex; align-items:center; justify-content:space-between">'+
+    '<div><div style="font-size:var(--r-large); font-weight:800">'+faNum(shop.latestScore)+'</div>'+
+    '<div class="sub" style="color:var(--text-2); font-size:var(--r-footnote)">'+esc(routeName(shop.routeId))+(shop.neighborhoodId?' • '+esc(neighborhoodName(shop.routeId,shop.neighborhoodId)):'')+'</div></div>'+
     rankPillHtml(shop.latestRank)+'</div>';
 
-  html += '<div class="btn-row" style="margin-bottom:12px">'+
-    '<button class="btn btn-primary" data-action="startVisit" data-id="'+esc(shop.id)+'">ثبت ویزیت جدید</button>'+
-    '</div>';
-  html += '<div class="btn-row" style="margin-bottom:14px">'+
-    '<button class="btn btn-secondary" data-action="copyReport" data-id="'+esc(shop.id)+'">کپی گزارش</button>'+
-    '<button class="btn btn-secondary" data-action="editShop" data-id="'+esc(shop.id)+'">ویرایش</button>'+
-    '<button class="btn btn-danger" data-action="askDeleteShop" data-id="'+esc(shop.id)+'">حذف</button>'+
-    '</div>';
+  // sparkline روند امتیاز
+  if(shop.visits.length>1){
+    const scores = shop.visits.map(v=>v.score);
+    const maxS = Math.max(...scores, 100);
+    const minS = Math.min(...scores, 0);
+    const range = maxS - minS || 1;
+    const w = 280, h = 40, pad = 4;
+    const pts = scores.map((s,i)=>{
+      const x = pad + (i/(scores.length-1))*(w-2*pad);
+      const y = h-pad-((s-minS)/range)*(h-2*pad);
+      return x+','+y;
+    });
+    html += '<div class="row"><svg class="sparkline" width="100%" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+
+      '<polyline points="'+pts.join(' ')+'" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'+
+      scores.map((s,i)=>{
+        const x = pad + (i/(scores.length-1))*(w-2*pad);
+        const y = h-pad-((s-minS)/range)*(h-2*pad);
+        return '<circle cx="'+x+'" cy="'+y+'" r="3" fill="var(--accent)"/>';
+      }).join('')+
+    '</svg></div>';
+  }
+  html += '</div>';
 
+  // پیگیری بعدی
+  const followUpHtml = shop.nextFollowUp ?
+    '<div class="row" style="display:flex; align-items:center; justify-content:space-between">'+
+      '<span style="font-size:var(--r-callout)">پیگیری بعدی: '+faDate(shop.nextFollowUp)+'</span>'+
+      '<button class="link-btn" data-action="editFollowUp" data-id="'+esc(shop.id)+'">ویرایش</button>'+
+    '</div>' : '';
+
+  html += '<div class="grouped" style="margin-bottom:14px">'+
+    followUpHtml+
+    '<div class="row" style="display:flex; gap:8px">'+
+      '<button class="btn btn-filled" style="flex:1" data-action="startVisit" data-id="'+esc(shop.id)+'">ثبت ویزیت جدید</button>'+
+    '</div>'+
+    '<div class="row" style="display:flex; gap:8px">'+
+      '<button class="btn btn-tinted" style="flex:1" data-action="copyReport" data-id="'+esc(shop.id)+'">کپی گزارش</button>'+
+      '<button class="btn btn-tinted" style="flex:1" data-action="editShop" data-id="'+esc(shop.id)+'">ویرایش</button>'+
+    '</div>'+
+    (shop.neighborhoodId ? '<div class="row"><button class="btn btn-secondary" data-action="openMaps" data-id="'+esc(shop.id)+'">مسیریابی</button></div>' : '')+
+    '<div class="row"><button class="btn btn-danger" data-action="askDeleteShop" data-id="'+esc(shop.id)+'">حذف مغازه</button></div>'+
+  '</div>';
+
+  // پاسخ‌های آخرین ویزیت
   if(lastVisit){
-    html += '<div class="card"><div class="field-label">پاسخ‌های آخرین ویزیت ('+faDate(lastVisit.date)+')</div>';
+    html += '<div class="field-label">پاسخ‌های آخرین ویزیت ('+faDate(lastVisit.date)+')</div>';
+    html += '<div class="grouped" style="margin-bottom:14px">';
     QUESTIONS.forEach(q=>{
       const opt = q.options.find(o=>o.key===lastVisit.answers[q.id]);
       html += '<div class="answer-row"><span class="q">'+esc(q.label)+'</span><span class="a">'+(opt?esc(opt.label):'—')+'</span></div>';
@@ -1003,16 +1640,18 @@ function renderDetailView(){
     html += '</div>';
   }
 
-  html += '<div class="card"><div class="field-label">سوابق ویزیت ('+faNum(shop.visits.length)+')</div>';
+  // سوابق ویزیت
+  html += '<div class="field-label">سوابق ویزیت ('+faNum(shop.visits.length)+')</div>';
   if(shop.visits.length===0){
-    html += '<div style="color:var(--muted); font-size:13px">هنوز ویزیتی ثبت نشده</div>';
+    html += '<div class="grouped"><div class="row" style="color:var(--text-2); font-size:var(--r-callout)">هنوز ویزیتی ثبت نشده</div></div>';
   } else {
+    html += '<div class="grouped" style="padding:12px 16px">';
     shop.visits.slice().reverse().forEach(v=>{
       html += '<div class="timeline-item">'+
         '<div class="timeline-date">'+faDateTime(v.date)+'</div>'+
         '<div style="display:flex; align-items:center; gap:8px">'+
-          '<span style="font-weight:800; font-size:15px">'+faNum(v.score)+'</span>'+rankPillHtml(v.rank,'sm')+
-          '<button class="link-btn" style="margin-inline-start:auto; color:var(--danger); font-size:12px" data-action="askDeleteVisit" data-id="'+esc(shop.id)+'" data-visit="'+esc(v.id)+'">حذف</button>'+
+          '<span style="font-weight:700; font-size:var(--r-body)">'+faNum(v.score)+'</span>'+rankPillHtml(v.rank,'sm')+
+          '<button class="link-btn danger" style="margin-inline-start:auto; font-size:var(--r-footnote); min-height:36px; padding:4px" data-action="askDeleteVisit" data-id="'+esc(shop.id)+'" data-visit="'+esc(v.id)+'">حذف</button>'+
         '</div>'+
         (v.tags.length ? '<div class="timeline-tags">'+v.tags.map(tk=>{
           const t = VISIT_TAGS.find(x=>x.key===tk);
@@ -1020,17 +1659,19 @@ function renderDetailView(){
         }).join('')+'</div>' : '')+
       '</div>';
     });
+    html += '</div>';
   }
-  html += '</div>';
   return html;
 }
 function buildShopReportText(shop){
   const lastVisit = shop.visits[shop.visits.length-1];
   let lines = [];
   lines.push('گزارش مغازه: '+shop.name);
-  lines.push('مسیر: '+routeName(shop.routeId)+' — محله: '+neighborhoodName(shop.routeId, shop.neighborhoodId));
-  lines.push('امتیاز فعلی: '+shop.latestScore+' — رتبه: '+shop.latestRank+' ('+RANK_INFO[shop.latestRank].desc+')');
+  lines.push('مسیر: '+routeName(shop.routeId)+(shop.neighborhoodId?' — محله: '+neighborhoodName(shop.routeId, shop.neighborhoodId):''));
+  const rankInfo = RANK_INFO[shop.latestRank] || RANK_INFO['D'];
+  lines.push('امتیاز فعلی: '+shop.latestScore+' — رتبه: '+shop.latestRank+' ('+rankInfo.desc+')');
   lines.push('وضعیت: '+(shop.status==='converted' ? 'مشتری شده' : 'در حال پیگیری'));
+  if(shop.nextFollowUp) lines.push('پیگیری بعدی: '+faDate(shop.nextFollowUp));
   lines.push('');
   if(lastVisit){
     lines.push('پاسخ‌های آخرین ویزیت:');
@@ -1049,60 +1690,123 @@ function buildShopReportText(shop){
 }
 
 /* ============================================================
-   بخش ۱۲: رندر - داشبورد
+   بخش ۱۳: رندر — داشبورد
    ============================================================ */
 function renderDashboardView(){
-  const shops = state.shops;
-  let html = '<h2 class="view-title">داشبورد</h2>';
+  setNavBar('داشبورد', '', '<button class="nav-btn" data-action="toggleTheme">'+(state.theme==='dark'?'☀️':'🌙')+'</button>', true);
+
+  let html = '';
   html += renderTargetCard();
+
+  const shops = state.shops;
   if(shops.length===0){
     return html + '<div class="empty-state"><div class="big">📊</div>هنوز مغازه‌ای ثبت نشده</div>';
   }
+
   const scores = shops.map(s=>s.latestScore);
   const avg = Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
-  const max = Math.max(...scores);
-  const min = Math.min(...scores);
-  const rankCounts = {'A+':0,'A':0,'B':0,'C':0,'D':0};
-  shops.forEach(s=>{ rankCounts[s.latestRank] = (rankCounts[s.latestRank]||0)+1; });
+  const aPlusCount = shops.filter(s=>s.latestRank==='A+').length;
   const convertedCount = shops.filter(s=>s.status==='converted').length;
 
-  html += '<div class="stat-grid" style="margin-bottom:12px">'+
+  // KPI کارت‌ها
+  html += '<div class="stat-grid">'+
     '<div class="stat-box"><div class="n">'+faNum(shops.length)+'</div><div class="l">کل مغازه‌ها</div></div>'+
-    '<div class="stat-box"><div class="n">'+faNum(convertedCount)+'</div><div class="l">تبدیل به مشتری</div></div>'+
+    '<div class="stat-box"><div class="n" style="color:var(--green)">'+faNum(aPlusCount)+'</div><div class="l">رتبه A+</div></div>'+
+    '<div class="stat-box"><div class="n" style="color:var(--green)">'+faNum(convertedCount)+'</div><div class="l">تبدیل به مشتری</div></div>'+
     '<div class="stat-box"><div class="n">'+faNum(avg)+'</div><div class="l">میانگین امتیاز</div></div>'+
-    '<div class="stat-box"><div class="n">'+faNum(max)+' / '+faNum(min)+'</div><div class="l">بیشترین / کمترین</div></div>'+
   '</div>';
 
-  html += '<div class="card"><div class="field-label">توزیع رتبه‌ها</div>';
+  // توزیع رتبه‌ها — نمودار میله‌ای
+  const rankCounts = {'A+':0,'A':0,'B':0,'C':0,'D':0};
+  shops.forEach(s=>{ rankCounts[s.latestRank] = (rankCounts[s.latestRank]||0)+1; });
+  const maxCount = Math.max(...Object.values(rankCounts), 1);
+  html += '<div class="field-label">توزیع رتبه‌ها</div><div class="grouped" style="padding:12px 16px; margin-bottom:14px">';
   ['A+','A','B','C','D'].forEach(r=>{
-    html += '<div class="rank-row">'+rankPillHtml(r,'sm')+'<span style="flex:1; margin-inline-start:10px; font-size:13.5px">'+RANK_INFO[r].desc+'</span><b>'+faNum(rankCounts[r])+'</b></div>';
+    const info = RANK_INFO[r] || RANK_INFO['D'];
+    const count = rankCounts[r];
+    const pct = (count/maxCount)*100;
+    html += '<div class="rank-bar">'+
+      '<span style="width:34px; text-align:center">'+rankPillHtml(r,'sm')+'</span>'+
+      '<div class="bar-track"><div class="bar-fill" style="width:'+pct+'%; background:'+info.color+'"></div></div>'+
+      '<span style="font-weight:700; min-width:24px; text-align:center">'+faNum(count)+'</span>'+
+    '</div>';
   });
   html += '</div>';
 
-  html += '<div class="card"><div class="field-label">وضعیت هر مسیر</div>';
+  // نقاط داغ — مسیرهایی که بیشترین A+ را دارند
+  const routeAPlus = state.routes.map(r=>{
+    const rShops = shops.filter(s=>s.routeId===r.id);
+    const aPlus = rShops.filter(s=>s.latestRank==='A+').length;
+    return {name:r.name, aPlus, total:rShops.length};
+  }).filter(x=>x.aPlus>0).sort((a,b)=>b.aPlus-a.aPlus);
+  if(routeAPlus.length>0){
+    html += '<div class="field-label">نقاط داغ (مسیرهای پر A+)</div><div class="grouped" style="margin-bottom:14px">';
+    routeAPlus.forEach(r=>{
+      html += '<div class="row" style="display:flex; align-items:center; justify-content:space-between">'+
+        '<span style="font-weight:600">'+esc(r.name)+'</span>'+
+        '<span style="color:var(--green); font-weight:700">'+faNum(r.aPlus)+' A+</span>'+
+      '</div>';
+    });
+    html += '</div>';
+  }
+
+  // نیاز به پیگیری — مغازه‌هایی که بیش از X روز از آخرین ویزیت گذشته
+  const now = Date.now();
+  const followUpNeeded = shops.filter(s=>{
+    if(s.status==='converted') return false;
+    if(!s.visits.length) return true;
+    const lastVisitDate = new Date(s.visits[s.visits.length-1].date).getTime();
+    const daysSince = (now - lastVisitDate) / (1000*60*60*24);
+    return daysSince > 7;
+  }).sort((a,b)=>{
+    const aDate = a.visits.length ? new Date(a.visits[a.visits.length-1].date).getTime() : 0;
+    const bDate = b.visits.length ? new Date(b.visits[b.visits.length-1].date).getTime() : 0;
+    return aDate - bDate;
+  });
+  if(followUpNeeded.length>0){
+    html += '<div class="field-label">نیاز به پیگیری (بیش از ۷ روز)</div><div class="grouped" style="margin-bottom:14px">';
+    followUpNeeded.slice(0,10).forEach(s=>{
+      const lastVisit = s.visits[s.visits.length-1];
+      const days = lastVisit ? Math.floor((now - new Date(lastVisit.date).getTime())/(1000*60*60*24)) : 999;
+      html += '<div class="row" style="display:flex; align-items:center; justify-content:space-between" data-action="openDetail" data-id="'+esc(s.id)+'">'+
+        '<div><div style="font-weight:600">'+esc(s.name)+'</div>'+
+        '<div style="font-size:var(--r-footnote); color:var(--text-2)">'+(days>900?'هرگز ویزیت نشده':faNum(days)+' روز پیش')+'</div></div>'+
+        rankPillHtml(s.latestRank,'sm')+
+      '</div>';
+    });
+    html += '</div>';
+  }
+
+  // وضعیت هر مسیر
+  html += '<div class="field-label">وضعیت هر مسیر</div><div class="grouped" style="margin-bottom:14px">';
   if(state.routes.length===0){
-    html += '<div style="color:var(--muted); font-size:13px">مسیری تعریف نشده</div>';
+    html += '<div class="row" style="color:var(--text-2); font-size:var(--r-callout)">مسیری تعریف نشده</div>';
   } else {
     state.routes.forEach(r=>{
       const rShops = shops.filter(s=>s.routeId===r.id);
       const rAvg = rShops.length ? Math.round(rShops.reduce((a,s)=>a+s.latestScore,0)/rShops.length) : 0;
       const rAPlus = rShops.filter(s=>s.latestRank==='A+').length;
-      html += '<div class="rank-row"><span style="flex:1; font-size:13.5px; font-weight:700">'+esc(r.name)+'</span>'+
-        '<span style="font-size:12px; color:var(--muted)">'+faNum(rShops.length)+' مغازه • میانگین '+faNum(rAvg)+' • '+faNum(rAPlus)+' تا A+</span></div>';
+      html += '<div class="row" style="display:flex; align-items:center; justify-content:space-between">'+
+        '<span style="font-weight:600">'+esc(r.name)+'</span>'+
+        '<span style="font-size:var(--r-footnote); color:var(--text-2)">'+faNum(rShops.length)+' مغازه • میانگین '+faNum(rAvg)+' • '+faNum(rAPlus)+' A+</span>'+
+      '</div>';
     });
   }
   html += '</div>';
+
   return html;
 }
 
 /* ============================================================
-   بخش ۱۳: رندر - مدیریت مسیرها/محله‌ها
+   بخش ۱۴: رندر — مسیرها و محله‌ها
    ============================================================ */
-const routesViewState = { expanded:{}, editingRoute:null, editingNeigh:null };
 function renderRoutesView(){
-  let html = '<h2 class="view-title">مسیرها و محله‌ها</h2>';
-  html += '<div class="card"><div class="field-label">افزودن مسیر جدید</div>'+
-    '<div class="row-inline"><input type="text" id="new-route-input" placeholder="مثلاً: مسیر غرب"><button class="btn btn-primary" style="width:auto; padding-inline:16px" data-action="addRouteClick">افزودن</button></div></div>';
+  setNavBar('مسیرها و محله‌ها', '', '<button class="nav-btn" data-action="toggleTheme">'+(state.theme==='dark'?'☀️':'🌙')+'</button>', true);
+
+  let html = '<div class="field-label">افزودن مسیر جدید</div>'+
+    '<div style="display:flex; gap:8px; margin-bottom:18px">'+
+    '<input type="text" id="new-route-input" placeholder="مثلاً: مسیر غرب" style="flex:1">'+
+    '<button class="btn btn-filled" style="width:auto; padding:0 16px" data-action="addRouteClick">افزودن</button></div>';
 
   if(state.routes.length===0){
     html += '<div class="empty-state"><div class="big">🗺️</div>هنوز مسیری نساخته‌ای</div>';
@@ -1113,38 +1817,39 @@ function renderRoutesView(){
     const isOpen = !!routesViewState.expanded[r.id];
     const isEditingName = routesViewState.editingRoute===r.id;
     const count = state.shops.filter(s=>s.routeId===r.id).length;
-    html += '<div class="card">';
+    html += '<div class="grouped" style="margin-bottom:12px">';
     if(isEditingName){
-      html += '<div class="row-inline"><input type="text" id="edit-route-input" value="'+esc(r.name)+'">'+
-        '<button class="btn btn-primary" style="width:auto; padding-inline:14px" data-action="saveRouteName" data-id="'+esc(r.id)+'">ذخیره</button></div>';
+      html += '<div class="row" style="display:flex; gap:8px"><input type="text" id="edit-route-input" value="'+esc(r.name)+'" style="flex:1">'+
+        '<button class="btn btn-filled" style="width:auto; padding:0 14px" data-action="saveRouteName" data-id="'+esc(r.id)+'">ذخیره</button></div>';
     } else {
-      html += '<div class="accordion-head" data-action="toggleRoute" data-id="'+esc(r.id)+'">'+
-        '<div><b>'+esc(r.name)+'</b> <span style="color:var(--muted); font-size:12px">('+faNum(count)+' مغازه)</span></div>'+
-        '<span>'+(isOpen?'▲':'▼')+'</span></div>';
+      html += '<div class="row"><div class="accordion-head" data-action="toggleRoute" data-id="'+esc(r.id)+'">'+
+        '<div><b>'+esc(r.name)+'</b> <span style="color:var(--text-2); font-size:var(--r-footnote)">('+faNum(count)+' مغازه)</span></div>'+
+        '<span>'+(isOpen?'▲':'▼')+'</span></div></div>';
     }
     if(isOpen && !isEditingName){
-      html += '<div style="height:10px"></div><div class="btn-row">'+
-        '<button class="btn btn-secondary" data-action="startEditRoute" data-id="'+esc(r.id)+'">ویرایش نام</button>'+
+      html += '<div class="row"><div class="btn-row">'+
+        '<button class="btn btn-tinted" data-action="startEditRoute" data-id="'+esc(r.id)+'">ویرایش نام</button>'+
         '<button class="btn btn-danger" data-action="askDeleteRoute" data-id="'+esc(r.id)+'">حذف مسیر</button>'+
-      '</div>';
-      html += '<div style="height:12px"></div><div class="field-label">محله‌ها</div><div class="neigh-list">';
+      '</div></div>';
+      html += '<div class="row"><div class="field-label">محله‌ها</div><div class="neigh-list">';
       if(r.neighborhoods.length===0){
-        html += '<div style="color:var(--muted); font-size:13px">محله‌ای ثبت نشده</div>';
+        html += '<div style="color:var(--text-2); font-size:var(--r-footnote)">محله‌ای ثبت نشده</div>';
       }
       r.neighborhoods.forEach(n=>{
         const editingN = routesViewState.editingNeigh===n.id;
         if(editingN){
-          html += '<div class="neigh-row"><input type="text" id="edit-neigh-input" value="'+esc(n.name)+'" style="flex:1; margin-inline-end:8px; border:1px solid var(--border); border-radius:8px; padding:6px 8px; background:var(--surface); color:var(--text)">'+
+          html += '<div class="neigh-row"><input type="text" id="edit-neigh-input" value="'+esc(n.name)+'" style="flex:1; margin-inline-end:8px">'+
             '<button class="link-btn" data-action="saveNeighName" data-route="'+esc(r.id)+'" data-neigh="'+esc(n.id)+'">ذخیره</button></div>';
         } else {
-          html += '<div class="neigh-row"><span>'+esc(n.name)+'</span><span>'+
-            '<button class="link-btn" data-action="startEditNeigh" data-neigh="'+esc(n.id)+'">ویرایش</button> '+
-            '<button class="link-btn" style="color:var(--danger)" data-action="askDeleteNeigh" data-route="'+esc(r.id)+'" data-neigh="'+esc(n.id)+'">حذف</button></span></div>';
+          html += '<div class="neigh-row"><span>'+esc(n.name)+'</span><span style="display:flex; gap:4px">'+
+            '<button class="link-btn" data-action="startEditNeigh" data-neigh="'+esc(n.id)+'">ویرایش</button>'+
+            '<button class="link-btn danger" data-action="askDeleteNeigh" data-route="'+esc(r.id)+'" data-neigh="'+esc(n.id)+'">حذف</button></span></div>';
         }
       });
-      html += '</div><div style="height:10px"></div><div class="row-inline">'+
-        '<input type="text" id="new-neigh-input-'+esc(r.id)+'" placeholder="نام محله/خیابان جدید">'+
-        '<button class="btn btn-secondary" style="width:auto; padding-inline:14px" data-action="addNeighClick" data-id="'+esc(r.id)+'">افزودن</button></div>';
+      html += '</div><div style="height:10px"></div>'+
+        '<div style="display:flex; gap:8px">'+
+        '<input type="text" id="new-neigh-input-'+esc(r.id)+'" placeholder="نام محله/خیابان جدید" style="flex:1">'+
+        '<button class="btn btn-secondary" style="width:auto; padding:0 14px" data-action="addNeighClick" data-id="'+esc(r.id)+'">افزودن</button></div></div>';
     }
     html += '</div>';
   });
@@ -1152,62 +1857,168 @@ function renderRoutesView(){
 }
 
 /* ============================================================
-   بخش ۱۴: رندر - تنظیمات و پشتیبان‌گیری
+   بخش ۱۵: رندر — تنظیمات و پشتیبان‌گیری
    ============================================================ */
 function renderSettingsView(){
-  let html = '<h2 class="view-title">تنظیمات</h2>';
-  html += '<div class="card"><div class="field-label">ظاهر برنامه</div>'+
-    '<button class="btn btn-secondary" data-action="toggleThemeSettings">'+(state.theme==='dark'?'☀️ حالت روشن':'🌙 حالت تیره')+'</button></div>';
-  html += '<div class="card"><div class="field-label">پشتیبان‌گیری</div>'+
-    '<div class="btn-row"><button class="btn btn-secondary" data-action="exportBackup">📤 خروجی JSON</button>'+
-    '<button class="btn btn-secondary" data-action="triggerImport">📥 ورودی JSON</button></div>'+
-    '<input type="file" id="import-file-input" accept="application/json" style="display:none">'+
-    '</div>';
-  html += '<div class="card"><div class="field-label">درباره</div>'+
-    '<div style="font-size:13px; color:var(--muted)">نسخه '+APP_VERSION+' — این ابزار فقط برای مرحله‌ی پیش از مشتری‌شدن است؛ بعد از تبدیل، اطلاعات را با «کپی گزارش» به CRM اصلی منتقل کن.</div></div>';
+  setNavBar('تنظیمات', '', '<button class="nav-btn" data-action="toggleTheme">'+(state.theme==='dark'?'☀️':'🌙')+'</button>', true);
+
+  let html = '';
+
+  // ظاهر
+  html += '<div class="field-label">ظاهر برنامه</div>'+
+    '<div class="grouped" style="margin-bottom:18px"><div class="row">'+
+      '<button class="btn btn-secondary" data-action="toggleThemeSettings">'+(state.theme==='dark'?'☀️ حالت روشن':'🌙 حالت تیره')+'</button>'+
+    '</div></div>';
+
+  // پشتیبان‌گیری
+  html += '<div class="field-label">پشتیبان‌گیری</div>'+
+    '<div class="grouped" style="margin-bottom:18px">'+
+    '<div class="row"><button class="btn btn-tinted" data-action="exportJSON">📤 خروجی JSON</button></div>'+
+    '<div class="row"><button class="btn btn-tinted" data-action="exportCSV">📊 خروجی CSV</button></div>'+
+    '<div class="row"><button class="btn btn-tinted" data-action="triggerImport">📥 ورودی JSON</button></div>'+
+    '</div>'+
+    '<input type="file" id="import-file-input" accept="application/json" style="display:none">';
+
+  // پاک کردن همه
+  html += '<div class="field-label">خطرناک</div>'+
+    '<div class="grouped" style="margin-bottom:18px"><div class="row">'+
+      '<button class="btn btn-danger" data-action="askDeleteAll">پاک کردن همه داده‌ها</button>'+
+    '</div></div>';
+
+  // درباره
+  html += '<div class="field-label">درباره</div>'+
+    '<div class="grouped"><div class="row" style="font-size:var(--r-footnote); color:var(--text-2); line-height:1.6">'+
+    'نسخه '+APP_VERSION+' — این ابزار فقط برای مرحلهٔ پیش از مشتری‌شدن است؛ بعد از تبدیل، اطلاعات را با «کپی گزارش» به CRM اصلی منتقل کن.'+
+    '</div></div>';
+
   return html;
 }
-async function exportBackup(){
+
+// Export JSON
+async function exportJSON(){
   const payload = { appVersion:APP_VERSION, exportedAt:nowISO(), routes:state.routes, shops:state.shops };
   const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = 'prospects-backup-'+nowISO().slice(0,10)+'.json';
+  a.href = url; a.download = 'shop-evaluator-backup-'+nowISO().slice(0,10)+'.json';
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
-  showToast('فایل بکاپ دانلود شد ✅');
+  showToast('فایل JSON دانلود شد');
 }
+
+// Export CSV
+function exportCSV(){
+  const headers = ['نام','مسیر','محله','امتیاز','رتبه','وضعیت','تاریخ آخرین ویزیت','تعداد ویزیت'];
+  const rows = state.shops.map(s=>{
+    const lastVisit = s.visits[s.visits.length-1];
+    return [
+      s.name,
+      routeName(s.routeId),
+      s.neighborhoodId ? neighborhoodName(s.routeId, s.neighborhoodId) : '',
+      s.latestScore,
+      s.latestRank,
+      s.status==='converted' ? 'مشتری' : 'فعال',
+      lastVisit ? faDate(lastVisit.date) : '',
+      s.visits.length,
+    ];
+  });
+  const csv = [headers, ...rows].map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const bom = '\uFEFF';
+  const blob = new Blob([bom+csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'shop-evaluator-'+nowISO().slice(0,10)+'.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('فایل CSV دانلود شد');
+}
+
+// Import با پیش‌نمایش
 function validateBackupShape(obj){
   return obj && typeof obj==='object' && Array.isArray(obj.shops) && Array.isArray(obj.routes);
 }
 async function importBackupFile(file){
-  const preRestoreSnapshot = { routes: state.routes, shops: state.shops, savedAt: nowISO() };
   try{
-    await dbPut('meta', {key:'preRestoreSnapshot', value:preRestoreSnapshot});
     const text = await file.text();
     const parsed = JSON.parse(text);
     if(!validateBackupShape(parsed)) throw new Error('bad-shape');
     const newShops = parsed.shops.map(normalizeShop);
     const newRoutes = parsed.routes.map(normalizeRoute);
-    await dbReplaceAll('shops', newShops);
-    await dbReplaceAll('routes', newRoutes);
-    state.shops = newShops;
-    state.routes = newRoutes;
-    showToast('بازیابی با موفقیت انجام شد ✅');
-    render();
+    // پیش‌نمایش قبل از تأیید
+    openOverlay(
+      '<div class="drag-handle"></div><h3>پیش‌نمایش ورودی</h3>'+
+      '<div style="color:var(--text-2); font-size:var(--r-callout); margin-bottom:14px">'+
+        '<div>مسیرها: '+faNum(newRoutes.length)+'</div>'+
+        '<div>مغازه‌ها: '+faNum(newShops.length)+'</div>'+
+        '<div>تبدیل‌شده: '+faNum(newShops.filter(s=>s.status==='converted').length)+'</div>'+
+      '</div>'+
+      '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
+      '<button class="btn btn-filled" data-action="confirmImport">تأیید و جایگزینی</button></div>'
+    );
+    // ذخیره موقت برای تأیید
+    _pendingImport = { shops:newShops, routes:newRoutes };
   } catch(e){
-    try{
-      await dbReplaceAll('shops', preRestoreSnapshot.shops);
-      await dbReplaceAll('routes', preRestoreSnapshot.routes);
-      state.shops = preRestoreSnapshot.shops;
-      state.routes = preRestoreSnapshot.routes;
-    }catch(e2){}
-    showToast('فایل بکاپ نامعتبر است ⚠️ — اطلاعات قبلی حفظ شد');
+    showToast('فایل بکاپ نامعتبر است');
+  }
+}
+let _pendingImport = null;
+async function confirmImportBackup(){
+  if(!_pendingImport) return;
+  const { shops, routes } = _pendingImport;
+  _pendingImport = null;
+  // snapshot قبل از بازیابی
+  const preRestoreSnapshot = { routes: state.routes, shops: state.shops, savedAt: nowISO() };
+  try{
+    await dbPut('meta', {key:'preRestoreSnapshot', value:preRestoreSnapshot});
+    // import atomicity: دو store در یک تراکنش
+    await dbReplaceAllAtomic(shops, routes);
+    state.shops = shops;
+    state.routes = routes;
+    closeAllOverlays();
+    render();
+    showToast('بازیابی با موفقیت انجام شد');
+  } catch(e){
+    showToast('خطا در بازیابی — اطلاعات قبلی حفظ شد');
   }
 }
 
+// پاک کردن همه — تأیید دو مرحله‌ای
+let _deleteAllStage = 0;
+function askDeleteAll(){
+  _deleteAllStage = 0;
+  confirmDeleteAllStep();
+}
+function confirmDeleteAllStep(){
+  if(_deleteAllStage===0){
+    _deleteAllStage = 1;
+    openOverlay(
+      '<div class="drag-handle"></div><h3>پاک کردن همه داده‌ها</h3>'+
+      '<p style="color:var(--text-2); margin-bottom:16px">این عمل تمام مغازه‌ها، مسیرها و ویزیت‌ها را حذف می‌کند. آیا مطمئنی؟</p>'+
+      '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
+      '<button class="btn btn-danger" data-action="confirmDeleteAllStep">بله، ادامه</button></div>'
+    );
+  } else {
+    _deleteAllStage = 2;
+    openOverlay(
+      '<div class="drag-handle"></div><h3 style="color:var(--red)">تأیید نهایی</h3>'+
+      '<p style="color:var(--red); margin-bottom:16px">این عمل قابل بازگشت نیست. برای تأیید، دکمهٔ زیر را بزن.</p>'+
+      '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
+      '<button class="btn btn-danger" data-action="confirmDeleteAllFinal">پاک کن</button></div>'
+    );
+  }
+}
+async function doDeleteAllFinal(){
+  await dbReplaceAllAtomic([], []);
+  state.shops = [];
+  state.routes = [];
+  _deleteAllStage = 0;
+  closeAllOverlays();
+  render();
+  showToast('همه داده‌ها پاک شد');
+}
+
 /* ============================================================
-   بخش ۱۵: مسیریابی و رندر اصلی
+   بخش ۱۶: رندر اصلی و مسیریابی
    ============================================================ */
 function render(){
   const root = document.getElementById('view-root');
@@ -1219,7 +2030,7 @@ function render(){
     case 'routes': root.innerHTML = renderRoutesView(); break;
     case 'settings': root.innerHTML = renderSettingsView(); break;
   }
-  document.querySelectorAll('#bottom-nav button').forEach(b=>{
+  document.querySelectorAll('#tabbar button').forEach(b=>{
     b.classList.toggle('active', b.dataset.nav===state.view);
   });
   if(state.view==='entry'){
@@ -1235,16 +2046,16 @@ function goTo(view){
     ensureDailyTarget().then(render);
   }
   render();
+  window.scrollTo(0, 0);
 }
 
 /* ============================================================
-   بخش ۱۶: مدیریت رویدادها (Event Delegation)
+   بخش ۱۷: مدیریت رویدادها
    ============================================================ */
-document.getElementById('bottom-nav').addEventListener('click', (e)=>{
+document.getElementById('tabbar').addEventListener('click', (e)=>{
   const btn = e.target.closest('[data-nav]');
   if(btn) goTo(btn.dataset.nav);
 });
-document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
 document.getElementById('view-root').addEventListener('click', (e)=>{
   const chipEl = e.target.closest('[data-chip]');
@@ -1255,18 +2066,25 @@ document.getElementById('view-root').addEventListener('click', (e)=>{
 document.getElementById('overlay-root').addEventListener('click', (e)=>{
   const actionEl = e.target.closest('[data-action]');
   if(!actionEl) return;
-  // فقط کلیک روی خود پس‌زمینهٔ تیره باعث بستن شود، نه کلیک روی محتوای شیت
+  // فقط کلیک روی خود پس‌زمینهٔ تیره باعث بستن شود
   if(actionEl.dataset.action==='closeOverlayBg' && e.target!==actionEl) return;
   onAction(actionEl);
 });
 
+// input — draft auto-save با throttle
 document.getElementById('view-root').addEventListener('input', (e)=>{
   if(e.target.id==='shop-name-input'){
     formState.name = e.target.value;
     updateSaveButtonState();
+    if(_draftSaveTimer) clearTimeout(_draftSaveTimer);
+    _draftSaveTimer = setTimeout(saveDraftToStorage, 500);
   } else if(e.target.id==='list-search-input'){
     state.listSearch = e.target.value;
+    const sb = document.getElementById('search-bar-wrap');
+    if(sb) sb.classList.toggle('active', !!state.listSearch);
     document.getElementById('list-results').innerHTML = renderListResultsInner();
+  } else if(e.target.id==='new-neigh-input'){
+    formState.newNeighborhoodName = e.target.value;
   }
 });
 document.getElementById('view-root').addEventListener('change', (e)=>{
@@ -1284,22 +2102,26 @@ function onChipClick(el){
     formState.routeId = value;
     formState.neighborhoodId = null;
     updateChipGroupSingle('route', value);
-    const card = document.getElementById('neighborhood-card');
-    if(card){ card.style.display=''; document.getElementById('neighborhood-chips').innerHTML = renderNeighborhoodChipsInner(); }
-    updateSaveButtonState();
+    // رندر مجدد برای نمایش محله‌ها
+    render();
+    saveDraftToStorage();
   } else if(group==='neighborhood'){
     formState.neighborhoodId = value;
     updateChipGroupSingle('neighborhood', value);
+    saveDraftToStorage();
   } else if(group==='tags'){
     const i = formState.tags.indexOf(value);
     if(i>=0) formState.tags.splice(i,1); else formState.tags.push(value);
     updateChipGroupMulti('tags', formState.tags);
+    saveDraftToStorage();
   } else if(group.startsWith('q')){
     formState.answers[group] = value;
     updateChipGroupSingle(group, value);
     updateLiveScoreUI();
+    saveDraftToStorage();
   }
 }
+
 function onAction(el){
   const action = el.dataset.action;
   const id = el.dataset.id;
@@ -1322,7 +2144,7 @@ function onAction(el){
     case 'askDeleteVisit': confirmDeleteVisit(id, el.dataset.visit); break;
     case 'confirmDeleteVisitYes': doDeleteVisit(id, el.dataset.visit); break;
     case 'closeOverlay': closeOverlay(); break;
-    case 'closeOverlayBg': if(el===document.querySelector('.overlay')) closeOverlay(); break;
+    case 'closeOverlayBg': closeOverlay(); break;
     case 'addRouteClick': handleAddRouteClick(); break;
     case 'toggleRoute': routesViewState.expanded[id] = !routesViewState.expanded[id]; render(); break;
     case 'startEditRoute': routesViewState.editingRoute = id; render(); break;
@@ -1334,87 +2156,110 @@ function onAction(el){
     case 'saveNeighName': handleSaveNeighName(el.dataset.route, el.dataset.neigh); break;
     case 'askDeleteNeigh': confirmDeleteNeigh(el.dataset.route, el.dataset.neigh); break;
     case 'confirmDeleteNeighYes': doDeleteNeigh(el.dataset.route, el.dataset.neigh); break;
-    case 'toggleThemeSettings': toggleTheme(); render(); break;
-    case 'exportBackup': exportBackup(); break;
+    case 'toggleThemeSettings': toggleTheme(); break;
+    case 'toggleTheme': toggleTheme(); break;
+    case 'exportJSON': exportJSON(); break;
+    case 'exportCSV': exportCSV(); break;
     case 'triggerImport': document.getElementById('import-file-input').click(); break;
+    case 'confirmImport': confirmImportBackup(); break;
+    case 'askDeleteAll': askDeleteAll(); break;
+    case 'confirmDeleteAllStep': confirmDeleteAllStep(); break;
+    case 'confirmDeleteAllFinal': doDeleteAllFinal(); break;
     case 'openTargetSheet': openTargetSheet(); break;
     case 'saveTargetValue': handleSaveTargetValue(); break;
     case 'askStartNewDay': confirmStartNewDay(); break;
     case 'confirmStartNewDayYes': handleStartNewDayConfirmed(); break;
+    case 'addNeighFromForm': handleAddNeighFromForm(); break;
+    case 'setSegment': state.listSegment = el.dataset.segment; document.getElementById('list-results').innerHTML = renderListResultsInner(); updateSegmentUI(); break;
+    case 'clearSearch': state.listSearch=''; render(); break;
+    case 'openMaps': {
+      const shop = state.shops.find(s=>s.id===id);
+      if(shop){
+        const addr = encodeURIComponent(shop.name + ' ' + routeName(shop.routeId) + ' ' + (shop.neighborhoodId?neighborhoodName(shop.routeId,shop.neighborhoodId):''));
+        window.location.href = 'maps://?q='+addr;
+      }
+      break;
+    }
+    case 'editFollowUp': openFollowUpSheet(id); break;
+    case 'saveFollowUp': handleSaveFollowUp(); break;
   }
 }
+function updateSegmentUI(){
+  document.querySelectorAll('.segment-control button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.segment===state.listSegment);
+  });
+}
 
-/* ---- توابع کمکی اکشن‌های بالا ---- */
+/* ---- توابع کمکی اکشن‌ها ---- */
 function handleAddRouteClick(){
   const input = document.getElementById('new-route-input');
-  const name = (input.value||'').trim();
+  const name = faToEnDigits(input.value||'').trim();
   if(!name){ showToast('نام مسیر را وارد کن'); return; }
-  addRoute(name).then(()=>{ render(); showToast('مسیر اضافه شد ✅'); });
+  addRoute(name).then(()=>{ render(); showToast('مسیر اضافه شد'); });
 }
 function handleSaveRouteName(id){
   const input = document.getElementById('edit-route-input');
-  const name = (input.value||'').trim();
+  const name = faToEnDigits(input.value||'').trim();
   if(!name){ showToast('نام نمی‌تواند خالی باشد'); return; }
-  renameRoute(id, name).then(()=>{ routesViewState.editingRoute=null; render(); showToast('ذخیره شد ✅'); });
+  renameRoute(id, name).then(()=>{ routesViewState.editingRoute=null; render(); showToast('ذخیره شد'); });
 }
 function handleAddNeighClick(routeId){
   const input = document.getElementById('new-neigh-input-'+routeId);
-  const name = (input.value||'').trim();
+  const name = faToEnDigits(input.value||'').trim();
   if(!name){ showToast('نام محله را وارد کن'); return; }
-  addNeighborhood(routeId, name).then(()=>{ render(); showToast('محله اضافه شد ✅'); });
+  addNeighborhood(routeId, name).then(()=>{ render(); showToast('محله اضافه شد'); });
 }
 function handleSaveNeighName(routeId, neighId){
   const input = document.getElementById('edit-neigh-input');
-  const name = (input.value||'').trim();
+  const name = faToEnDigits(input.value||'').trim();
   if(!name){ showToast('نام نمی‌تواند خالی باشد'); return; }
-  renameNeighborhood(routeId, neighId, name).then(()=>{ routesViewState.editingNeigh=null; render(); showToast('ذخیره شد ✅'); });
+  renameNeighborhood(routeId, neighId, name).then(()=>{ routesViewState.editingNeigh=null; render(); showToast('ذخیره شد'); });
 }
 function confirmDeleteRoute(id){
   const r = state.routes.find(x=>x.id===id);
-  openOverlay('<h3>حذف مسیر</h3><p>مسیر «'+esc(r?r.name:'')+'» حذف شود؟ مغازه‌های موجود در این مسیر حذف نمی‌شوند، فقط مسیرشان خالی می‌ماند.</p>'+
+  openOverlay('<div class="drag-handle"></div><h3>حذف مسیر</h3><p style="color:var(--text-2); margin-bottom:16px">مسیر «'+esc(r?r.name:'')+'» حذف شود؟ مغازه‌های این مسیر حذف نمی‌شوند، فقط مسیرشان خالی می‌ماند.</p>'+
     '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
     '<button class="btn btn-danger" data-action="confirmDeleteRouteYes" data-id="'+esc(id)+'">حذف مسیر</button></div>');
 }
 function doDeleteRoute(id){ deleteRouteById(id).then(()=>{ closeOverlay(); render(); showToast('مسیر حذف شد'); }); }
 function confirmDeleteNeigh(routeId, neighId){
-  openOverlay('<h3>حذف محله</h3><p>این محله حذف شود؟</p>'+
+  openOverlay('<div class="drag-handle"></div><h3>حذف محله</h3><p style="color:var(--text-2); margin-bottom:16px">این محله حذف شود؟</p>'+
     '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
     '<button class="btn btn-danger" data-action="confirmDeleteNeighYes" data-route="'+esc(routeId)+'" data-neigh="'+esc(neighId)+'">حذف</button></div>');
 }
 function doDeleteNeigh(routeId, neighId){ deleteNeighborhoodById(routeId, neighId).then(()=>{ closeOverlay(); render(); showToast('محله حذف شد'); }); }
 function confirmDeleteShop(id){
   const s = state.shops.find(x=>x.id===id);
-  openOverlay('<h3>حذف مغازه</h3><p>مغازه «'+esc(s?s.name:'')+'» و تمام سوابق ویزیت آن حذف شود؟ این عمل قابل بازگشت نیست.</p>'+
+  openOverlay('<div class="drag-handle"></div><h3>حذف مغازه</h3><p style="color:var(--text-2); margin-bottom:16px">مغازه «'+esc(s?s.name:'')+'» و تمام سوابق ویزیت آن حذف شود؟ این عمل قابل بازگشت نیست.</p>'+
     '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
     '<button class="btn btn-danger" data-action="confirmDeleteShopYes" data-id="'+esc(id)+'">حذف</button></div>');
 }
-function doDeleteShop(id){
-  deleteShop(id).then(()=>{ closeOverlay(); state.view='list'; render(); showToast('حذف شد'); });
-}
+function doDeleteShop(id){ deleteShop(id).then(()=>{ closeOverlay(); state.view='list'; render(); showToast('حذف شد'); }); }
 function confirmDeleteVisit(shopId, visitId){
-  openOverlay('<h3>حذف ویزیت</h3><p>این ویزیت از سوابق حذف شود؟</p>'+
+  openOverlay('<div class="drag-handle"></div><h3>حذف ویزیت</h3><p style="color:var(--text-2); margin-bottom:16px">این ویزیت از سوابق حذف شود؟</p>'+
     '<div class="btn-row"><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'+
     '<button class="btn btn-danger" data-action="confirmDeleteVisitYes" data-id="'+esc(shopId)+'" data-visit="'+esc(visitId)+'">حذف</button></div>');
 }
-function doDeleteVisit(shopId, visitId){
-  deleteVisit(shopId, visitId).then(()=>{ closeOverlay(); render(); showToast('ویزیت حذف شد'); });
-}
+function doDeleteVisit(shopId, visitId){ deleteVisit(shopId, visitId).then(()=>{ closeOverlay(); render(); showToast('ویزیت حذف شد'); }); }
+
 function openEditShopSheet(id){
   const shop = state.shops.find(s=>s.id===id);
   if(!shop) return;
   const routeOptions = state.routes.map(r=>'<option value="'+esc(r.id)+'"'+(shop.routeId===r.id?' selected':'')+'>'+esc(r.name)+'</option>').join('');
-  openOverlay('<h3>ویرایش مغازه</h3>'+
+  openOverlay(
+    '<div class="drag-handle"></div><h3>ویرایش مغازه</h3>'+
     '<div class="field-label">نام مغازه</div><input type="text" id="edit-shop-name" value="'+esc(shop.name)+'" style="margin-bottom:12px">'+
-    '<div class="field-label">مسیر</div><select id="edit-shop-route" style="width:100%; margin-bottom:12px">'+routeOptions+'</select>'+
-    '<button class="btn btn-primary" data-action="saveShopEdit" data-id="'+esc(id)+'">ذخیره تغییرات</button>'+
-    '<div style="height:8px"></div><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>');
+    '<div class="field-label">مسیر</div><select id="edit-shop-route" style="width:100%; margin-bottom:14px">'+routeOptions+'</select>'+
+    '<button class="btn btn-filled" data-action="saveShopEdit" data-id="'+esc(id)+'">ذخیره تغییرات</button>'+
+    '<div style="height:8px"></div><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'
+  );
 }
 async function saveShopEditFromSheet(){
   const btn = document.querySelector('[data-action="saveShopEdit"]');
   const id = btn.dataset.id;
   const shop = state.shops.find(s=>s.id===id);
   if(!shop) return;
-  const name = (document.getElementById('edit-shop-name').value||'').trim();
+  const name = faToEnDigits(document.getElementById('edit-shop-name').value||'').trim();
   const routeId = document.getElementById('edit-shop-route').value;
   if(!name){ showToast('نام نمی‌تواند خالی باشد'); return; }
   shop.name = name;
@@ -1422,11 +2267,35 @@ async function saveShopEditFromSheet(){
   await persistShop(shop);
   closeOverlay();
   render();
-  showToast('ذخیره شد ✅');
+  showToast('ذخیره شد');
+}
+
+// پیگیری بعدی
+function openFollowUpSheet(id){
+  const shop = state.shops.find(s=>s.id===id);
+  if(!shop) return;
+  const today = new Date().toISOString().slice(0,10);
+  openOverlay(
+    '<div class="drag-handle"></div><h3>پیگیری بعدی</h3>'+
+    '<div class="field-label">تاریخ یادآوری ویزیت بعدی</div>'+
+    '<input type="date" id="follow-up-input" value="'+(shop.nextFollowUp||today)+'" style="margin-bottom:14px; min-height:48px">'+
+    '<button class="btn btn-filled" data-action="saveFollowUp" data-id="'+esc(id)+'">ذخیره</button>'+
+    '<div style="height:8px"></div><button class="btn btn-secondary" data-action="closeOverlay">انصراف</button>'
+  );
+}
+async function handleSaveFollowUp(){
+  const btn = document.querySelector('[data-action="saveFollowUp"]');
+  const id = btn.dataset.id;
+  const dateVal = document.getElementById('follow-up-input').value;
+  if(!dateVal){ showToast('تاریخ را انتخاب کن'); return; }
+  await setNextFollowUp(id, dateVal);
+  closeOverlay();
+  render();
+  showToast('پیگیری بعدی ذخیره شد');
 }
 
 /* ============================================================
-   بخش ۱۷: راه‌اندازی اولیه
+   بخش ۱۸: راه‌اندازی اولیه
    ============================================================ */
 (async function init(){
   try{
@@ -1434,11 +2303,50 @@ async function saveShopEditFromSheet(){
     await loadAllData();
     await ensureDailyTarget();
   } catch(e){
-    showToast('خطا در بارگذاری اطلاعات ⚠️');
+    showToast('خطا در بارگذاری اطلاعات');
   }
+  // بارگذاری draft از localStorage
+  loadDraftFromStorage();
   resetEntryFormForNew(false);
+  // اگر draft داشتیم، فرم را با draft پر کنیم
+  if(loadDraftFromStorage()){
+    // draft بارگذاری شد
+  }
   render();
 })();
+
+/*
+   نسخه ۲.۰ — تاریخ ۱۴۰۵/۰۷/۰۹
+   تغییرات نسبت به نسخهٔ ۱.۰:
+   - بازطراحی کامل UI با iOS HIG: رنگ‌های سیستمی، SF Pro، blur، hairline
+   - ۹ سؤال (ادغام q5+q10، جایگزینی q9 با سؤال عینی‌تر)
+   - امتیاز مستقیم = وزن سؤال (بدون نرمال‌سازی)
+   - آستانه‌های رتبه‌بندی: A+ ≥۸۵، A ≥۷۰، B ≥۵۰، C ≥۳۰، D <۳۰
+   - Navigation bar با blur و Large Title
+   - Tab bar با SVG icons و blur
+   - Sheet با drag handle و animation
+   - Segment Control بومی iOS در لیست
+   - Search bar با دکمهٔ cancel
+   - Sparkline روند امتیاز در جزئیات
+   - پیگیری بعدی (یادآوری ویزیت)
+   - دکمهٔ مسیریابی (maps://)
+   - Activity Ring برای تارگت روزانه
+   - Streak روزهای پیاپی تارگت
+   - داشبورد: KPI کارت‌ها، نمودار توزیع رتبه، نقاط داغ، نیاز به پیگیری
+   - Export CSV (علاوه بر JSON)
+   - Import با پیش‌نمایش قبل از تأیید
+   - پاک کردن همه با تأیید دو مرحله‌ای
+   - افزودن محله از داخل فرم
+   - شمارش سؤالات بی‌پاسخ و دلیل غیرفعال بودن دکمهٔ ثبت
+   - حفظ draft در localStorage با throttle ۵۰۰ms
+   - PWA: manifest با PNG icon و scope، apple-touch-icon PNG
+   - Theme از localStorage (sync) برای جلوگیری از flash
+   - visibilitychange برای ریست dailyTarget
+   - ۱۴ باگ‌فیکس فنی (milestone، route stale، sticky، overlay stack و…)
+   - computeScore ساده: weight = maxScore، بدون نرمال‌سازی
+   - RANK_INFO با || RANK_INFO['D'] محافظت شده
+   - faToEnDigits در همهٔ parseInt‌ها
+*/
 </script>
 </body>
 </html>
